@@ -1,158 +1,320 @@
+/* COMMON */
+
+.heading {
+  font-family: 'Concert One', cursive;
+  font-size: 250%;
+  text-align: center;
+  margin-bottom: 5%;
+}
+
+.heading:hover {
+  text-decoration-line: underline;
+}
 
 /* NAVBAR */
 
-.mainIcon {
-  margin: 0 1% 0 .5%;
-  border: 2% solid black;
-} 
-
-#navIcon {
-  height: 50px;
-  width: 50px;
+.navbar {
+  font-size: 140%;
+  font-family: 'Concert One', cursive;
+  display: flex;
+  background-color: black;
+  color: white;
 }
 
-.mynavoptions {
-  padding-right: 65%;
+.navbar a {
+  color: beige;
+}
+
+.navbar a:hover {
+  text-decoration-line: underline;
+  color: white;
+  padding-top: 5%;
+}
+
+.navlabel {
+  display: flex;
+  flex: 1;
+  width: .5%;
+}
+
+.icondiv {
+  flex-basis: 4%;
+}
+
+.mainicon {
+  height: 100%;
+  width: 100%;
 }
 
 
 /* COVER */
-.coverpic {
-  position: relative;
-  height: 100%;
-  width: 100%;
-}
-.covertext {
-  position: absolute;
-  color: white;
-  font-family: 'Courier New', Courier, monospace;
-  top: 40%;
-  left: 15%;
-}
-.form-control {
-  background-color: black;
-  /* width: 100%; */
+
+.cover {
+  background-image: url("./material/pics/cover.jpg");
+  height: 100vh;
+  background-size: cover;
 }
 
-.tb5 {
-	border:2px solid #456879;
-	border-radius:10px;
-	height: 22px;
-  width: 230px;
-  border-top: 0%;
-  border-color: yellow;
-  width: 100%;
-  height: 40px;
+.covertext {
+  padding: 10% 10%;
+}
+
+.searchbox {
+  border-radius: 5%;
+  width: 40%;
+  height: 50px;
+  padding-left: 5%;
+  font-size: 120%;
 }
 
 .searchtext {
   color: black;
+  font-size: 150%;
+  padding-left: 5%;
 }
+
 
 /* ACHIVEMENTS */
 
-.div4 {
-  float: left;
-  padding: 2% 2%;
-  margin: 2% 2%;
-  border: 2px solid black;
+.achivementsec {
+  background-image: url("./material/pics/achivementsBackground.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  padding: 2.5% 0%;
+}
+
+.achivementdiv {
+  display: flex;
+  width: 70%;
+  margin-left: 15%;
+  flex-direction: column;
+}
+
+.achivementboxes {
+  display: flex;
+  justify-content: center;
+}
+
+.achivementbox {
+  display: flex;
+  border: 5px solid red;
+  margin-right: 5%;
+  padding: 3%;
   width: 20%;
+  border-radius: 10%;
+  box-shadow: 15px 15px 15px black;
+  justify-content: center;
+}
+
+.fact {
+  font-size: 300%;
 }
 
 
 /* TOP RATED */
-.div3 {
-  float: left;
-  padding: 2% 2%;
-  margin: 2% 2%;
-  width: 25%;
+
+.topratedsec {
+  display: flex;
+  /* background-image: url("./material/pics/topratedBackground.jpg"); */
+  background-image: url("./material/pics/achivementsBackground.jpg");
+  padding: 2.5% 0%;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
-.topteacher {
-  height: 100%;
+.toprateddiv {
+  display: flex;
+  width: 76%;
+  margin-left: 12%;
+  flex-direction: column;
+}
+
+.rateboxes {
+  display: flex;
+  justify-content: center;
+}
+
+.ratebox {
+  display: flex;
+  flex-direction: column;
+  border: 5px solid red;
+  margin: 3%;
+  box-shadow: 15px 15px 15px black;
+  border-radius: 10%;
+}
+
+.ratepic {
+  display: flex;
   width: 100%;
+  height: 100%;
 }
 
-.toprated{
-  clear:both;
+.topteacherpic {
+  width: 100%;
+  height: 100%;
+  border-radius: 10%;  
+
 }
 
+.ratetext {
+  text-align: center;
+}
 
 /* REMARKS */
-.remarks {
-  clear: both;
+
+.remarksec {
+  display: flex;
+  /* background-image: url("./material/pics/remarkBackground.jpg"); */
+  background-image: url("./material/pics/achivementsBackground.jpg");
+  padding: 2.5% 0%;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
-.div2 {
-  float: left;
-  padding: 2%;
-  margin: 2%;
-  width: 40%;
+.remarkdiv {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  margin-left: 15%;
 }
 
-.remarkteacher {
+.remarkboxes {
+  display: flex;
+  justify-content: center;
+}
+
+.remarkbox {
+  display: flex;
+  flex-direction: column;
+  border: 5px solid red;
+  margin: 0% 3%;
+  border-radius: 10%;
+  box-shadow: 15px 15px 15px black;
+}
+
+.remarkpic {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
   height: 100%;
-  width: 50%;
-  margin: 0% 0% 3% 20%;
+  padding: 2% 0%;
+  /* margin-left: 10%; */
+}
+
+.remarkteacherpic {
+  display: flex;
   border-radius: 50%;
-}
-
-
-/* ABOUT US */
-.aboutus {
-  clear: both;
-  width: 100%
-}
-
-.aboutpics {
-  float: left;
-  width: 25%;
-}
-
-.aboutpic {
-  height: 80%;
   width: 80%;
-  padding: 0% 10% 5% 20%;
-  border-radius: 20%;
+  height: 80%;
+  padding: 0% 2%;
 }
 
-.abouttext {
-  float: right;
-  width: 60%;
-  padding: 2% 10% 2% 0%;
+.remarkname  {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  font-size: 150%;
+  text-decoration-line: underline;  
 }
 
-.linkset1 {
-  float: right;
-  padding-top: 8%;  
+.remarktext {
+  display: flex;
+  padding: 1%;
+  background-color: rgba(247, 246, 245,.5);
+  border-radius: 10%;
+  margin: 3%;
 }
 
-.gmail {
-  height: 50px;
-  width: 50px;
-  padding-bottom: 12%;
+.quotes {
+  font-size: 200%;
 }
-.facebook {
-  height: 50px;
-  width: 50px;
-  padding-bottom: 12%;
+
+.quotesleft {
+  font-size: 350%;
+  font-style: oblique;
 }
-.github {
-  height: 50px;
-  width: 50px;
-  padding-bottom: 12%;
+
+/* CONTACT US */
+
+.contactdiv {
+  display: flex;
+  width: 70%;
+  margin-left: 15%;
+  padding-bottom: 4%;
 }
-.twitter {
-  height: 50px;
-  width: 50px;
-  padding-bottom: 12%;
+
+.contactboxes {
+  display: flex;
+}
+
+.contactpic {
+  display: flex;
+  width: 100%;
+  height: 20%;
+}
+
+.contacttext {
+  display: flex;
+  padding: 0% 5%;
+}
+
+.contactheading {
+  margin-top: 2%;
 }
 
 /* FOOTER */
+
 .footer {
+  font-family: 'Concert One', cursive;
   clear: both;
-  height: 10%;
+  height: 15%;
   text-align: center;
   background-color: black;
   color: white;
 }
+
+.footer h1 {
+  padding: 1%;
+}
+
+/* @media only screen and (min-width: 600px) {
+  .icons{
+    width:30em;
+    padding-bottom:8%;
+  }
+  .aboutpic{
+    width: 50%;
+    height:50%;
+    margin-bottom: 5%;
+  }
+
+  .icon {
+    line-height:1em;
+    padding-bottom: 0%;
+   
+  }
+  .aboutpics{
+    margin-right:-8%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .icons{
+    width:10em;
+  }
+  .aboutpic{
+    width: 95%;
+    height:95%;
+  }
+
+  .icon {
+    line-height:em;
+   
+  }
+  .aboutpics{
+    margin-right: 9%;
+  }
+} */
