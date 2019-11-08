@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" type="text/css" href="./praise.css">
+  <link rel="stylesheet" type="text/css" href="../material/bootstrap-4.3.1-dist/css/bootstrap.css">
+</head>
+<body>
+<section class="mynavbar">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="mainIcon">
+      <img id="navIcon" src="../material/pics/mainIcon.png">
+    </div>
+    
+    <a class="navbar-brand" href="../index.html">Praise My Guru</a>
+  
+    <div class="collapse navbar-collapse mynavoptions" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="../colleges/college.html">College</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="../colleges/school.html">School</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="../praise/praise.html">Praise</a>
+        </li>
+      </ul>  
+    </div>
+    <div class="collapse navbar-collapse mynavLogin">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="../index.html?#contactus">About Us</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="../login/signin.html">SignIn/SignUp</a>
+        </li>
+      </ul>  
+      </div>
+  </nav>
+</section>
+
+<section class="rating">
+  <div class="ratepic">
+    <div>
+      <img class="img" src="../material/pics/teacher.png">
+    </div>
+  </div>
+  <div class="rateform">
+    <form>
+      <div class="fieldslider fieldname">
+        <label for="slider" class="fhead" >Worth listening</label>
+        <div class="formresponse fresponseslider">  
+          <input type="range" list="tickmarks" name="slider">
+          <datalist id="tickmarks">
+            <option value="0"></option>
+            <option value="1"></option>
+            <option value="2"></option>
+            <option value="3"></option>
+            <option value="4"></option>
+            <option value="5"></option>
+            <option value="6"></option>
+            <option value="7"></option>
+            <option value="8"></option>
+            <option value="9"></option>
+            <option value="10"></option>
+          </datalist>
+        </div>
+      </div>
+
+      <div class="fieldstar fieldname">
+        <label for="star" class="fhead">Overall prazing</label>
+        <div class="formresponse fresponsestar">  
+          <input type="radio" id="star5" name="star" value="5" />
+          <label for="star5" title="text">5 stars</label>
+          <input type="radio" id="star4" name="star" value="4" />
+          <label for="star4" title="text">4 stars</label>
+          <input type="radio" id="star3" name="star" value="3" />
+          <label for="star3" title="text">3 stars</label>
+          <input type="radio" id="star2" name="star" value="2" />
+          <label for="star2" title="text">2 stars</label>
+          <input type="radio" id="star1" name="star" value="1" />
+          <label for="star1" title="text">1 star</label>
+        </div>
+      </div>
+
+      <div class="fieldtags fieldname">
+        <form class="fhead">Select 5 Tags That Best Describe Your Guru</form>
+        <p>Choose carefully - the fate of future students lies in your hands.</p>
+        <div class="formresponse">  
+          <!-- <div class="tagcontainer"> -->
+            <ul class="ks-cboxtags">
+              <li><input type="checkbox" id="checkboxTwo" value="Respected" checked><label for="checkboxTwo">Respected</label></li>
+              <li><input type="checkbox" id="checkboxThree" value="GivesHomework" checked><label for="checkboxThree">Gives Homework</label></li>
+              <li><input type="checkbox" id="checkboxFour" value="AccessibleOutsideClass"><label for="checkboxFour">Accessible Outside Class</label></li>
+              <li><input type="checkbox" id="checkboxFive" value="ParticipationMatters"><label for="checkboxFive">Participation Matters</label></li>
+              <li><input type="checkbox" id="checkboxSix" value="CanSkipClassEasily" checked><label for="checkboxSix">Can Skip Class Easily</label></li>
+              <li><input type="checkbox" id="checkboxSeven" value="Fluttershy"><label for="checkboxSeven">Fluttershy</label></li>
+              <li><input type="checkbox" id="checkboxEight" value="Inspirational"><label for="checkboxEight">Inspirational</label></li>
+              <li><input type="checkbox" id="checkboxNine" value="TestHeavy"><label for="checkboxNine">Test Heavy</label></li>
+              <li><input type="checkbox" id="checkboxTen" value="GroupProjects"><label for="checkboxTen">Group Projects</label></li>
+              <li><input type="checkbox" id="checkboxTwelve" value="ClearGradingCriteria"><label for="checkboxTwelve">Clear Grading Criteria</label></li>
+              <li><input type="checkbox" id="checkboxThirteen" value="Hilarious"><label for="checkboxThirteen">Hilarious</label></li>
+              <li><input type="checkbox" id="checkboxFourteen" value="BewareOfPopQuizzers"><label for="checkboxFourteen">Beware Of Pop Quizzers</label></li>
+              <li><input type="checkbox" id="checkboxFifteen" value="AmazingLectures"><label for="checkboxFifteen">Amazing Lectures</label></li>
+              <li><input type="checkbox" id="checkboxThirteen" value="LectureHeavy"><label for="checkboxThirteen">Lecture Heavy</label></li>
+              <li><input type="checkbox" id="checkboxThirteen" value="Caring"><label for="checkboxThirteen">Caring</label></li>
+              <li><input type="checkbox" id="checkboxThirteen" value="Extra Credit"><label for="checkboxThirteen">Extra Credit</label></li>
+              <li><input type="checkbox" id="checkboxThirteen" value="Tough Grader"><label for="checkboxThirteen">Tough Grader</label></li>
+            </ul>
+          <!-- </div> -->
+        </div>
+      </div>
+      
+      <div class="fieldattendence fieldname">   
+        <form class="fhead fattendname">Recmand this teacher!!</form>   
+        <div class="formresponse fattend">    
+            <fieldset>
+              <div class="toggle">
+                <input type="radio" name="sizeBy" value="weight" id="sizeWeight" checked="checked" />
+                <label for="sizeWeight">It's pretty, pretty, pretty, pretty good</label>
+                <input type="radio" name="sizeBy" value="dimensions" id="sizeDimensions" />
+                <label for="sizeDimensions">100% yes</label>
+              </div>
+            </fieldset>
+        </div>
+      </div>
+
+      <div class="fieldsuggestion fieldname">
+        <form class="fhead" for="suggestions">Any Suggestions</form>
+        <div class="formresponse">
+          <textarea name="suggestions">Give some suggestions for your Guru!!</textarea>
+        </div>
+      </div>
+      
+      <div class="fieldattendence formresponse wrapper">
+        <button class="">
+          <span>Submit</span>
+          <div class="success">
+            <svg xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"  viewBox="0 0 29.756 29.756" style="enable-background:new 0 0 29.756 29.756;" xml:space="preserve">
+              <path d="M29.049,5.009L28.19,4.151c-0.943-0.945-2.488-0.945-3.434,0L10.172,18.737l-5.175-5.173   c-0.943-0.944-2.489-0.944-3.432,0.001l-0.858,0.857c-0.943,0.944-0.943,2.489,0,3.433l7.744,7.752   c0.944,0.943,2.489,0.943,3.433,0L29.049,8.442C29.991,7.498,29.991,5.953,29.049,5.009z"/>
+            </svg>
+          </div>
+        </button>
+      </div>
+
+    </form>
+  </div>  
+</section>
+
+<section class="footer">
+  <h1>2019@Copyright</h1>
+</section>
+
+<script src="../material/jquery.js"></script>
+<script src="./praise.js"></script>
+</body>
+</html>

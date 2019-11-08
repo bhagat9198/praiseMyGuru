@@ -1,0 +1,64 @@
+/* NAVBAR */
+
+.mainIcon {
+  margin: 0 1% 0 .5%;
+  border: 2% solid black;
+} 
+
+#navIcon {
+  height: 50px;
+  width: 50px;
+}
+
+.mynavoptions {
+  padding-right: 65%;
+}
+
+/* SCHOOL DIV */
+.schdiv {
+  border: 2px solid black;
+  margin: 2% 10%;
+  width: 70%;
+  height: 40%;
+}
+
+
+/* HEADING */
+.heading {
+  margin: 5% 10%;
+}
+
+/* SCHOOL PIC */
+.schpic {
+  float: left;
+  width: 10%;
+  height: 100%;
+  margin:0%;
+  margin-right: 2%;
+}
+
+
+/* SCHOOL TEXT */
+
+.schname {
+  color: red;
+}
+
+.schlocation {
+  color: blue;
+}
+
+
+/* FOOTER */
+
+.footer {
+  clear: both;
+  margin-bottom: 0%;
+  position: absolute;
+  bottom: 0;
+  /* height: 10%; */
+  width: 100%;
+  text-align: center;
+  background-color: black;
+  color: white;
+}
