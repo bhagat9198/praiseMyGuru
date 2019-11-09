@@ -1,0 +1,132 @@
+{% extends 'base.html' %}
+
+{% load static%}
+
+{% block content %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}">
+
+<section class="cover">
+  <div class="covertext">
+    <form >
+      <p class="searchtext">Search any teacher, College or School!!
+      <span class="serchdiv"><img clas="searchIcon" src="{% static 'material/pics/searchIcon.png' %}"></span></p>
+      <label for="search"></label>
+      <input type="text" name="search" class="searchbox" placeholder="Search for any teacher">
+      <!-- <input type="submit" name="submit"> -->
+    </form>
+  </div>
+</section>
+
+<section class="achivementsec">
+  <div class="achivementdiv">
+    <div class="heading">
+      <p>Achievements</p>
+    </div>
+    <div class="achivementboxes">
+      <div class="achivementbox">
+        <p><span class="fact"><strong>100+</strong> </span><br> colleges</div>
+      <div class="achivementbox">
+        <p><span class="fact"><strong>50+</strong> </span><br> schools</p>
+      </div>
+      <div class="achivementbox">
+        <p><span class="fact"><strong>500+</strong> </span><br> Teachers</p>
+      </div>
+      <div class="achivementbox">
+        <p><span class="fact"><strong>1500+</strong> </span><br> Students praised</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="topratedsec">
+  <div class="toprateddiv">
+    <div class="heading">
+      Top Rated
+    </div>
+    <div class="rateboxes">
+      <div class="ratebox">
+        <div class="ratepic">
+          <img class="topteacherpic" src="{% static 'material/pics/teacher.png' %}">
+        </div>
+        <div class="ratetext">
+          <p class="teachername">Lorem ipsum dolor sit amet</p>
+          <p class="teachercollge">Lorem ipsum dolor sit amet</p>
+        </div>
+      </div>
+
+      <div class="ratebox">
+        <div class="ratepic">
+          <img class="topteacherpic" src="{% static '/material/pics/teacher.png' %}">
+        </div>
+        <div class="ratetext">
+          <p class="teachername">Lorem ipsum dolor sit amet</p>
+          <p class="teachercollge">Lorem ipsum dolor sit amet</p>
+        </div>
+      </div>
+
+      <div class="ratebox">
+        <div class="ratepic">
+          <img class="topteacherpic" src="{% static '/material/pics/teacher.png' %}">
+        </div>
+        <div class="ratetext">
+          <p class="teachername">Lorem ipsum dolor sit amet</p>
+          <p class="teachercollge">Lorem ipsum dolor sit amet</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="remarksec">
+  <div class="remarkdiv">
+    <div class="heading">
+      Remarks
+    </div>
+    <div class="remarkboxes">
+      <div class="remarkbox">
+        <div class="remarkpic">
+          <img class="remarkteacherpic" src="{% static '/material/pics/teacher.png' %}">
+        </div>
+        <div class="remarkname">
+          <p>Lorem ipsum dolor</p>
+        </div>
+        <div class="remarktext">
+          <p>
+            <span class="quotesleft">&#8220;</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pellentesque nec nam aliquam sem et tortor consequat id porta. Eget duis at tellus at urna. Sagittis aliquam malesuada bibendum arcu vitae. Cursus euismod quis viverra nibh cras. In vitae turpis massa sed elementum tempus egestas sed sed. Id ornare arcu odio ut. Vitae et leo duis ut diam quam. Nisl vel pretium lectus quam id leo in vitae turpis. Habitant morbi tristique senectus et netus. Tristique et egestas quis ipsum. Praesent tristique magna sit amet purus gravida quis.<span class="quotes">&#8221;</span>
+          </p>
+        </div>
+      </div>
+
+      <div class="remarkbox">
+          <div class="remarkpic">
+            <img class="remarkteacherpic" src="{% static '/material/pics/teacher.png' %}">
+          </div>
+          <div class="remarkname">
+            <p>Lorem ipsum dolor</p>
+          </div>
+          <div class="remarktext">
+            <p>
+              <span class="quotesleft">&#8220;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pellentesque nec nam aliquam sem et tortor consequat id porta. Eget duis at tellus at urna. Sagittis aliquam malesuada bibendum arcu vitae. Cursus euismod quis viverra nibh cras. In vitae turpis massa sed elementum tempus egestas sed sed. Id ornare arcu odio ut. Vitae et leo duis ut diam quam. Nisl vel pretium lectus quam id leo in vitae turpis. Habitant morbi tristique senectus et netus. Tristique et egestas quis ipsum. Praesent tristique magna sit amet purus gravida quis.<span class="quotes">&#8221;</span>
+            </p>
+          </div>
+        </div>
+    </div>
+  </div>
+</section>
+
+<div class="contactheading heading">
+  <p>Contact Us</p>
+</div>
+<section class="contactsec">
+  <div class="contactdiv">
+        <div class="contactpic">
+          <img class="cpic" src="{% static 'material/pics/mainIcon.png' %}">
+        <div class="contacttext">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pellentesque nec nam aliquam sem et tortor consequat id porta. Eget duis at tellus at urna. Sagittis aliquam malesuada bibendum arcu vitae. Cursus euismod quis viverra nibh cras. In vitae turpis massa sed elementum tempus egestas sed sed. Id ornare arcu odio ut. Vitae et leo duis ut diam quam. Nisl vel pretium lectus quam id leo in vitae turpis. Habitant morbi tristique senectus et netus. Tristique et egestas quis ipsum. Praesent tristique magna sit amet purus gravida quis.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pellentesque nec nam aliquam sem et tortor consequat id porta. Eget duis at tellus at urna. Sagittis aliquam malesuada bibendum arcu vitae. Cursus euismod quis viverra nibh cras. In vitae turpis massa sed elementum tempus egestas sed sed. Id ornare arcu odio ut. Vitae et leo duis ut diam quam. Nisl vel pretium lectus quam id leo in vitae turpis. Habitant morbi tristique senectus et netus. Tristique et egestas quis ipsum. Praesent tristique magna sit amet purus gravida quis.
+      </div>
+  </div>
+</section>
+
+{% endblock %}
