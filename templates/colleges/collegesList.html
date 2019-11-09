@@ -1,0 +1,39 @@
+{% extends 'index.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<link type="text/css" rel="stylesheet"  href="{% static './css/collegesList.css' %}">
+
+<section class="heading">
+  <div>
+    <h1>Searches for : Colleges </h1>
+  </div>
+</section>
+<section class="colleges">
+  <div class="coldiv col1">
+    <div >
+      <img class="colpic" src="{% static './material/pics/colleges/college.png' %}">
+    </div>
+    <div class="coltext">
+      <p class="colname">Lorem ipsum</p>
+      <p class="collocation">Lorem ipsum</p>
+      <p class="coltype">Lorem ipsum</p>
+      <p class="colteachers">100</p>
+    </div>
+  </div>
+  <div class="coldiv col2">
+    <div >
+      <img class="colpic" src="{% static './material/pics/colleges/college.png' %}">
+    </div>
+    <div class="coltext">
+      <p class="colname">Lorem ipsum</p>
+      <p class="collocation">Lorem ipsum</p>
+      <p class="coltype">Lorem ipsum</p>
+      <p class="colteachers">100</p>
+    </div>
+  </div>
+</section>
+
+{% endblock %}
