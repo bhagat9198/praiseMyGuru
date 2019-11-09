@@ -1,0 +1,39 @@
+{% extends 'index.html'%}
+
+{% load static %}
+
+{% block content %}
+
+<link rel="stylesheet" type="text/css" href="{% static './css/schoolsList.css' %}">
+
+<section class="heading">
+  <div>
+    <h1>Searches for : Schools </h1>
+  </div>
+</section>
+<section class="schools">
+  <div class="schdiv sch1">
+    <div >
+      <img class="schpic" src="{% static './material/pics/schools/school.png' %}">
+    </div>
+    <div class="schtext">
+      <p class="schname">Lorem ipsum</p>
+      <p class="schlocation">Lorem ipsum</p>
+      <p class="schtype">Lorem ipsum</p>
+      <p class="schteachers">100</p>
+    </div>
+  </div>
+  <div class="schdiv sch2">
+    <div >
+      <img class="schpic" src="{% static './material/pics/schools/school.png' %}">
+    </div>
+    <div class="schtext">
+      <p class="schname">Lorem ipsum</p>
+      <p class="schlocation">Lorem ipsum</p>
+      <p class="schtype">Lorem ipsum</p>
+      <p class="schteachers">100</p>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

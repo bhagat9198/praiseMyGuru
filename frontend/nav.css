@@ -1,0 +1,28 @@
+/* NAVBAR */
+
+.mainicon {
+  height: 100%;
+  width: 100%;
+  margin: .5% 1%;
+}
+
+.aboutus {
+  margin-left: 40%;
+}
+
+span a {
+  color: black;
+}
+
+span a:hover {
+  color: red;
+}
+
+.iconspam {
+  height: 3%;
+  width: 3%;
+}
+
+.navbar {
+  background-color: darkgray;
+}

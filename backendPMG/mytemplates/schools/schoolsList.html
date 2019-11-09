@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'css/school.css' %}">
+
+<div class="heading">
+  <p>Schools</p>
+</div>
+<section class="colleges">
+  <div class="college">
+    <div class="collegepic">
+      <img class="pic" src="{% static '/material/pics/teacher.png' %}">
+    </div>
+    <div class="collegetext ">
+      <div class="cname textdiv">
+      <span class="lhead">Name :</span>Lorem ipsum
+      </div>
+      <div class="cplace textdiv">
+        <span class="lhead">Place :</span>Lorem ipsum
+      </div>
+      <div class="cplace textdiv">
+        <span class="lhead">Type :</span>Lorem ipsum
+      </div>
+      <div class="cteachers textdiv">
+        <span class="lhead">Teachers :</span>100
+      </div>
+    </div>  
+  </div>
+
+  <div class="college">
+    <div class="collegepic">
+      <img class="pic" src="{% static '/material/pics/teacher.png' %}">
+    </div>
+    <div class="collegetext ">
+      <div class="cname textdiv">
+        Name: Lorem ipsum
+      </div>
+      <div class="cplace textdiv">
+        Place: Lorem ipsum
+      </div>
+      <div class="cplace textdiv">
+        Type: Lorem ipsum
+      </div>
+      <div class="cteachers textdiv">
+        Teachers: 100
+      </div>
+    </div>  
+  </div>
+</section>
+
+{% endblock %}

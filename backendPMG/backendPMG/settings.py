@@ -20,17 +20,24 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '(4er%4(#-1mne4%!qoy0wcvr_5^duzb2!oylllqxau&@bkz7#!'
+SECRET_KEY = 'mvnyh=+q=my6!a^7yfyq&%6r2x4xc9jh+at(%@en%0e)4vgddb'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
 
 INSTALLED_APPS = [
+
+    'aboutus.apps.AboutusConfig',
+    'accounts.apps.AccountsConfig',
+    'addTeacher.apps.AddteacherConfig',
+    'praiseTeacher.apps.PraiseteacherConfig',
+    'schools.apps.SchoolsConfig',
+    'colleges.apps.CollegesConfig',
     'home.apps.HomeConfig',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -55,7 +62,7 @@ ROOT_URLCONF = 'backendPMG.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'mytemplates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -119,3 +126,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'backendPMG/mystatic')
+]
+

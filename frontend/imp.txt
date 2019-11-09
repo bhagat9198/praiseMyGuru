@@ -1,0 +1,14 @@
+//HEADING BOLD
+
+<link href="https://fonts.googleapis.com/css?family=Concert+One&display=swap" rel="stylesheet">
+font-family: 'Concert One', cursive;
+
+//SUBHEADING
+
+<link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+font-family: 'Nunito', sans-serif;
+
+
+input[type=text] {
+  border: 0%;
+}
