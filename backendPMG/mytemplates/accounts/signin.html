@@ -6,15 +6,17 @@
 
 <link rel="stylesheet" type="text/css" href="{% static 'css/signin.css' %}">
 
-<section class="login-page">
-  <div class="form">
-    <form class="login-form">
-      <input type="text" placeholder="username"/>
-      <input type="password" placeholder="password"/>
-      <button>login</button>
-      <p class="message">Not registered? <a href="{% url 'signup' %}">Create an account</a></p>
-    </form>
-  </div>
+<section class="signinsec">
+  <div class="singnindiv">
+    <div class="boxes">
+      <form method="POST"  action="#" class="form">
+        <div ><input type="text" class="tlabel" placeholder="Username"  required></div>
+        <div ><input type="password" class="tlabel" placeholder="Password"  required></div>
+        <div ><input type="submit" class="tlabel" value="submit"></div>
+      </form>
+      <div class="register">Not registered? <a class="link" href="{% url 'signup' %}"> Create an account</a></div>
+    </div>
+  </div> 
 </section>
 
 {% endblock %}

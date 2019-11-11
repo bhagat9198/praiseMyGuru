@@ -1,4 +1,3 @@
-
 /* COMMON */
 
 .heading {
@@ -12,11 +11,10 @@
   text-decoration-line: underline;
 }
 
-
 /* COVER */
 
 .cover {
-  background-image: url("../material/pics/cover.jpg");
+  background-image: url("./material/pics/cover.jpg");
   height: 100vh;
   background-size: cover;
 }
@@ -31,6 +29,18 @@
   height: 50px;
   padding-left: 5%;
   font-size: 120%;
+  /* background-color: #ECB541; */
+  /* border: 0px 0px 1% 0px; */
+  background-color:rgba(0, 0, 0, 0);
+  /* border-top-color: #ECB541;
+  border-bottom-color: #ECB541;
+  border-right-color: #ECB541;
+  border-left-color: #ECB541; */
+  border-top: 0px;
+  border-bottom: 1%;
+  border-right: 0px;
+  border-left: 0px;
+
 }
 
 .searchtext {
@@ -43,7 +53,7 @@
 /* ACHIVEMENTS */
 
 .achivementsec {
-  background-image: url("../material/pics/achivementsBackground.jpg");
+  background-image: url("./material/pics/achivementsBackground.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   display: flex;
@@ -84,7 +94,7 @@
 .topratedsec {
   display: flex;
   /* background-image: url("./material/pics/topratedBackground.jpg"); */
-  background-image: url("../material/pics/achivementsBackground.jpg");
+  background-image: url("./material/pics/achivementsBackground.jpg");
   padding: 2.5% 0%;
   background-size: cover;
   background-repeat: no-repeat;
@@ -133,7 +143,7 @@
 .remarksec {
   display: flex;
   /* background-image: url("./material/pics/remarkBackground.jpg"); */
-  background-image: url("../material/pics/achivementsBackground.jpg");
+  background-image: url("./material/pics/achivementsBackground.jpg");
   padding: 2.5% 0%;
   background-size: cover;
   background-repeat: no-repeat;
@@ -231,43 +241,3 @@
   margin-top: 2%;
 }
 
-
-
-/* @media only screen and (min-width: 600px) {
-  .icons{
-    width:30em;
-    padding-bottom:8%;
-  }
-  .aboutpic{
-    width: 50%;
-    height:50%;
-    margin-bottom: 5%;
-  }
-
-  .icon {
-    line-height:1em;
-    padding-bottom: 0%;
-   
-  }
-  .aboutpics{
-    margin-right:-8%;
-  }
-}
-
-@media only screen and (max-width: 600px) {
-  .icons{
-    width:10em;
-  }
-  .aboutpic{
-    width: 95%;
-    height:95%;
-  }
-
-  .icon {
-    line-height:em;
-   
-  }
-  .aboutpics{
-    margin-right: 9%;
-  }
-} */
