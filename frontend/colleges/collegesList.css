@@ -34,6 +34,16 @@
 }
 
 
+
+/* COMMON */
+
+body {
+  background-image: url("../material/pics/collegesBackground.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+
 /* HEADING */
 
 .heading {
@@ -51,99 +61,72 @@
 
 }
 
-body {
-  background-image: url("../material/pics/cBackground.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-/* TEACHERS */
-
-.teacherdiv {
+/* COLLEGES SECTION */
+.colleges {
+  font-family: 'Nunito', sans-serif;
+  display: flex;
   width: 70%;
   margin-left: 15%;
-  display: flex;
-  margin-bottom: 5%;
-
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-.boxes {
+.college {
   display: flex;
   flex-direction: column;
-  /* width: 70%; */
+  width: 40%;
+  margin: 0% 5%;
+  border: 5px solid red;
+  margin-bottom: 10%;
+  padding: 2%;
+  background-color: #dbd8d5;
+  border-radius: 10%;
+  box-shadow: 15px 15px 15px black;
+
 }
 
-.heading {
-  font-size: 250%;
-  font-family: 'Concert One', cursive;
-}
-
-.maininfo {
+.collegepic {
   display: flex;
-  padding-bottom: 10%;
-}
-
-.tpic {
-  display: flex;
-  width: 30%;
-  height: 90%
+  height: 100%;
+  width: 100%;
+  margin-bottom: 10%;
 }
 
 .pic {
-  border-radius: 50%;
-  width: 100%;
+  border-radius: 10%;
   height: 100%;
+  width: 100%;
 }
 
-.tname {
+.collegetext {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  padding-left: 10%;
-  font-family: 'Nunito', sans-serif;
 }
 
-.tname div {
+.textdiv {
   display: flex;
-
+  /* justify-content:space-around; */
 }
 
-.informations {
-  display: flex;
-  width: 70%;
+.lhead {
+  font-weight: bold;
+  width: 25%;
   margin-left: 15%;
 }
 
-.info {
-  display: flex;
-  padding: 2% 2%;
-  font-size: 150%;
-  margin-left: 5%;
-  /* word-break: break-all; */
+.cteachers {
+  margin-left: 15%;
+  /* text-align: center; */
 }
 
-.infopic {
-  background-color: #fffafa;
-  border-radius: 5%;
+.tlink {
+  color: black;
+  text-decoration-line: underline;
 }
 
-.label {
-  display: flex;
-  font-family: 'Nunito', sans-serif;
-  font-weight: bold;
-  /* width: 20%; */
-  flex: 2;
+.colon {
+  padding-right: 3%;
 }
-
-.labelans {
-  display: flex;
-  font-family: 'Nunito', sans-serif;
-  padding-left: 3%;
-  word-wrap: break-word;
-  flex: 8;
-}
-
 
 /* FOOTER */
 

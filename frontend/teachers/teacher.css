@@ -52,7 +52,7 @@
 }
 
 body {
-  background-image: url("../material/pics/cBackground.jpg");
+  background-image: url("../material/pics/tBackground.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -104,6 +104,18 @@ body {
   font-family: 'Nunito', sans-serif;
 }
 
+.tnamelink {
+  color: black;
+  text-decoration-line: underline;
+  font-family: 'Concert One', cursive;
+}
+
+.tnamelink:hover {
+  color: red;
+  text-decoration-line: underline;
+  font-family: 'Concert One', cursive;
+}
+
 .tname div {
   display: flex;
 
@@ -113,19 +125,20 @@ body {
   display: flex;
   width: 70%;
   margin-left: 15%;
-}
-
-.info {
-  display: flex;
-  padding: 2% 2%;
-  font-size: 150%;
-  margin-left: 5%;
-  /* word-break: break-all; */
+  
 }
 
 .infopic {
   background-color: #fffafa;
   border-radius: 5%;
+}
+
+.info {
+  display: flex;
+  padding: 1% 0%;
+  font-size: 150%;
+  margin-left: 5%;
+  /* word-break: break-all; */
 }
 
 .label {
