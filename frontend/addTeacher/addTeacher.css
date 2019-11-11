@@ -109,6 +109,14 @@ textarea {
   height: 200%;
 }
 
+input[type="text"], input[type="number"], textarea {
+  background: rgba(0, 0, 0, 0);
+  border-top: 0px;
+  border-right: 0px;
+  border-left: 0px;
+  border-bottom: 3px solid gray;
+}
+
 /* FOOTER */
 
 .footer {
