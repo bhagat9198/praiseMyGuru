@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'css/teacher.css' %}">
+
+<section class="teachersec">
+  <div class="teacherdiv">
+    <div class="boxes">
+      <div class="heading">
+        <p>About Guru</p>
+      </div>
+      <div class="maininfo">
+        <div class="tpic">
+          <img class="pic" src="{% static 'material/pics/teacher.png' %}">
+        </div>
+        <div class="tname">
+          <div><h1>Lorem ipsum dolor sit amet</h1></div>
+          <div><h2>Lorem ipsum dolor sit amet</h2></div><br><br><br>
+          <div><h3>Want to give respect to your Guru?<a class="tnamelink" href="./praise.html">Praise Here!</a></h3></div>
+        </div>
+      </div>
+      <div class="infomations infopic">
+        <div class="info">
+          <span class="label">Institution Type </span><strong>:</strong> <span class="labelans">Lorem ipsum dolor sit amet</span>
+        </div>
+        <div class="info">
+          <span class="label">Subjects </span><strong>:</strong> <span class="labelans">Lorem ipsum dolor sit amet</span>
+        </div>
+        <div class="info">
+          <span class="label">Age </span><strong>:</strong> <span class="labelans">Lorem ipsum dolor sit amet</span>
+        </div>
+        <div class="info">
+          <span class="label">Expirence </span><strong>:</strong> <span class="labelans">LoremLorem ipsum dolor sit amet</span>
+        </div>
+        <div class="info">
+          <span class="label">Moto </span><strong>:</strong> <span class="labelans">Lorem ipsum dolor sit amet</span>
+        </div>
+        <div class="info">
+          <span class="label">Worth Listening </span><strong>:</strong> <span class="labelans">Lorem ipsum dolor sit amet</span>
+        </div>
+        <div class="info">
+          <span class="label">Stars </span><strong>:</strong> <span class="labelans">Lorem ipsum dolor sit amet</span>
+        </div>
+        <div class="info">
+          <span class="label">Tags </span><strong>:</strong> <span class="labelans">Lorem ipsum dolor sit amet</span>
+        </div>
+        <div class="info">
+          <span class="label">Suggest Others </span><strong>:</strong> <span class="labelans">Lorem ipsum dolor sit amet</span>
+        </div>
+        <div class="info">
+          <span class="label">Suggestions </span><strong>:</strong> <span class="labelans">Lorem ipsum dolor sit amet</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

@@ -6,27 +6,46 @@
 
 <link rel="stylesheet" type="text/css" href="{% static 'css/signup.css' %}">
 
-<div class="main-w3layouts wrapper">
-  <h1>SignUp Form</h1>
-  <div class="main-agileinfo">
-    <div class="agileits-top">
+<section class="signupsec"> 
+  <div class="signupdiv">
+    <div class="heading">
+      Tell Us About Yourself!!
+    </div>   
+    <div class="signupfields">
       <form action="#" method="post">
-        <input class="text" type="text" name="Username" placeholder="Username" required="">
-        <input class="text email" type="email" name="email" placeholder="Email" required="">
-        <input class="text" type="password" name="password" placeholder="Password" required="">
-        <input class="text w3lpass" type="password" name="password" placeholder="Confirm Password" required="">
-        <div class="wthree-text">
-          <label class="anim">
-            <input type="checkbox" class="checkbox" required="">
-            <span>I Agree To The Terms & Conditions</span>
-          </label>
-          <div class="clear"> </div>
+          <div class="flabel">
+            <input type="text" name="fname" class="finput" placeholder="First Name" required>
+          </div>
+        <div class="flabel">
+          <input type="text" name="lname" class="finput" placeholder="Last Name" required>
         </div>
-        <input type="submit" value="SIGNUP">
-      </form>
-      <p>Already have an Account? <a href="{% url 'signin' %}"> Login Now!</a></p>
+        <div class="flabel">
+          <input type="text" name="username" class="finput" placeholder="Username" required>
+        </div>
+        <div class="flabel">
+          <input type="email" name="email" class="finput" placeholder="E-mail" required>
+        </div>
+        <div class="flabel">
+          <input type="password" name="password" class="finput" placeholder="Password" required>
+        </div>
+        <div class="flabel">
+          <input type="password" name="password" class="finput" placeholder="Confirm Password" required>
+        </div>
+        <div class="flabel">
+          <input type="radio" name="category" value="student" required><span>Student</span>
+          <input type="radio" name="category" value="teacher" required><span>Teacher</span> 
+        </div>
+        <div class="flabel">
+          <input type="checkbox" name="terms" value="terms" required>
+          <span><a href="#" class="link">I Agree To The Terms & Conditions</a></span>
+        </div>
+        <div class="flabel">
+          <input type="submit" name="submit">
+        </div>
+      </form>   
+      <p class="already ">Already have an Account? <a class="link" href="{% url 'signin' %}"> Login Now!</a></p> 
     </div>
   </div>
-</div>
+</section>
 
 {% endblock %}

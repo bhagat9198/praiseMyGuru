@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'css/college.css' %}">
+
+<section class="teachersec">
+  <div class="teacherdiv">
+    <div class="boxes">
+      <div class="heading">
+        <p>About Institution</p>
+      </div>
+      <div class="maininfo">
+        <div class="tpic">
+          <img class="pic" src="{% static '../material/pics/teacher.png' %}">
+        </div>
+        <div class="tname">
+          <div><h1>aLorem ipsum dolor sit amet</h1></div>
+        </div>
+      </div>
+      <div class="infomations infopic">
+        <div class="info">
+          <div class="label">Institution Type </div><strong>:</strong> <div class="labelans">aaaLorem ipsum dolor sit amet</div>
+        </div>
+        <div class="info">
+          <div class="label">Location </div><strong>:</strong> <div class="labelans">Lorem ipsum dolor sit amet</div>
+        </div>
+        <div class="info">
+          <div class="label">Founded </div><strong>:</strong> <div class="labelans">Lorem ipsum dolor sit amet</div>
+        </div>
+        <div class="info">
+          <div class="label">Website </div><strong>:</strong> <div class="labelans">Lorem ipsum dolor sit amet</div>
+        </div>
+        <div class="info">
+          <div class="label">Moto </div><strong>:</strong> <div class="labelans"></div>
+        </div>
+        <div class="info">
+          <div class="label">Contact Number</div><strong>:</strong> <div class="labelans">Lorem ipsum dolor sit amet</div>
+        </div>
+        <div class="info">
+          <div class="label">Number of Guru's Registered </div><strong>:</strong> <div class="labelans">Lorem ipsum dolor sit amet</div>
+        </div>
+        <div class="info">
+          <div class="label">Avegerage rating of Guru </div><strong>:</strong> <div class="labelans">Lorem ipsum dolor sit amet</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

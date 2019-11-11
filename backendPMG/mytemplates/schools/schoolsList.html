@@ -4,7 +4,7 @@
 
 {% block content %}
 
-<link rel="stylesheet" type="text/css" href="{% static 'css/school.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/schoolsList.css' %}">
 
 <div class="heading">
   <p>Schools</p>
@@ -12,20 +12,20 @@
 <section class="colleges">
   <div class="college">
     <div class="collegepic">
-      <img class="pic" src="{% static '/material/pics/teacher.png' %}">
+      <img class="pic" src="{% static 'material/pics/teacher.png' %}">
     </div>
     <div class="collegetext ">
       <div class="cname textdiv">
-      <span class="lhead">Name :</span>Lorem ipsum
+      <span class="lhead">Name</span><strong class="colon">:</strong>Lorem ipsum
       </div>
       <div class="cplace textdiv">
-        <span class="lhead">Place :</span>Lorem ipsum
+        <span class="lhead">Loaction</span><strong class="colon">:</strong>Lorem ipsum
       </div>
       <div class="cplace textdiv">
-        <span class="lhead">Type :</span>Lorem ipsum
+        <span class="lhead">Founded</span><strong class="colon">:</strong>2000
       </div>
-      <div class="cteachers textdiv">
-        <span class="lhead">Teachers :</span>100
+      <div class="cteachers ">
+        <span class="lhead"><a class="tlink" href="{% url 'school' %}">Know more about school</a> </span>
       </div>
     </div>  
   </div>
@@ -36,16 +36,16 @@
     </div>
     <div class="collegetext ">
       <div class="cname textdiv">
-        Name: Lorem ipsum
+      <span class="lhead">Name</span><strong class="colon">:</strong>Lorem ipsum
       </div>
       <div class="cplace textdiv">
-        Place: Lorem ipsum
+        <span class="lhead">Loaction</span><strong class="colon">:</strong>Lorem ipsum
       </div>
       <div class="cplace textdiv">
-        Type: Lorem ipsum
+        <span class="lhead">Founded</span><strong class="colon">:</strong>2000
       </div>
-      <div class="cteachers textdiv">
-        Teachers: 100
+      <div class="cteachers ">
+        <span class="lhead"><a class="tlink" href="{% url 'school' %}">Know more about school</a> </span>
       </div>
     </div>  
   </div>

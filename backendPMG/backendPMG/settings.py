@@ -31,11 +31,10 @@ ALLOWED_HOSTS = ['*']
 # Application definition
 
 INSTALLED_APPS = [
-
+    'teachers.apps.TeachersConfig',
     'aboutus.apps.AboutusConfig',
     'accounts.apps.AccountsConfig',
     'addTeacher.apps.AddteacherConfig',
-    'praiseTeacher.apps.PraiseteacherConfig',
     'schools.apps.SchoolsConfig',
     'colleges.apps.CollegesConfig',
     'home.apps.HomeConfig',
