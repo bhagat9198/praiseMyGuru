@@ -9,9 +9,19 @@
 <section class="signinsec">
   <div class="singnindiv">
     <div class="boxes">
-      <form method="POST"  action="#" class="form">
-        <div ><input type="text" class="tlabel" placeholder="Username"  required></div>
-        <div ><input type="password" class="tlabel" placeholder="Password"  required></div>
+      <form method="POST"  action="{% url 'signin' %}" class="form">
+          {% csrf_token %}
+          {% if messages %}
+              <ul class="messages">
+                  {% for message in messages %}
+                
+                    {% if message.tags %} {% endif %} <div class="msg" style="color: red; font-size:95%">{{ message }}</div>
+            
+                  {% endfor %}
+              </ul>
+              {% endif %}
+        <div ><input type="text" name = "username" class="tlabel" placeholder="Username"  required></div>
+        <div ><input type="password" name = "password" class="tlabel" placeholder="Password"  required></div>
         <div ><input type="submit" class="tlabel" value="submit"></div>
       </form>
       <div class="register">Not registered? <a class="link" href="{% url 'signup' %}"> Create an account</a></div>

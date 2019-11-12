@@ -1,0 +1,128 @@
+/* NAVBAR */
+
+.navbar {
+  font-size: 140%;
+  font-family: 'Concert One', cursive;
+  display: flex;
+  background-color: black;
+  color: while;
+}
+
+.navbar a {
+  color: beige;
+}
+
+.navbar a:hover {
+  text-decoration-line: underline;
+  color: white;
+  padding-top: 5%;
+}
+
+.navlabel {
+  display: flex;
+  flex: 1;
+  width: .5%;
+}
+
+.icondiv {
+  flex-basis: 4%;
+}
+
+.mainicon {
+  height: 100%;
+  width: 100%;
+}
+
+
+
+/* COMMON */
+
+body {
+  background-image: url("../material/pics/collegesBackground.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+
+/* HEADING */
+
+.heading {
+  font-family: 'Concert One', cursive;
+  width: 70%;
+  margin-left: 15%;
+  font-size: 250%;
+  margin-bottom: 5%;
+  margin-top: 5%;
+  text-align: center;
+}
+
+.heading:hover {
+  text-decoration-line: underline;
+
+}
+
+/* COLLEGES SECTION */
+.colleges {
+  font-family: 'Nunito', sans-serif;
+  display: flex;
+  width: 70%;
+  margin-left: 15%;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.college {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  margin: 0% 5%;
+  border: 5px solid red;
+  margin-bottom: 10%;
+  padding: 2%;
+  background-color: #dbd8d5;
+  border-radius: 10%;
+  box-shadow: 15px 15px 15px black;
+
+}
+
+.collegepic {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  margin-bottom: 10%;
+}
+
+.pic {
+  border-radius: 10%;
+  height: 100%;
+  width: 100%;
+}
+
+.collegetext {
+  display: flex;
+  flex-direction: column;
+}
+
+.textdiv {
+  display: flex;
+  justify-content:space-around;
+}
+
+.lhead {
+  font-weight: bold;
+}
+
+/* FOOTER */
+
+.footer {
+  font-family: 'Concert One', cursive;
+  clear: both;
+  height: 15%;
+  text-align: center;
+  background-color: black;
+  color: white;
+}
+
+.footer h1 {
+  padding: 1%;
+}

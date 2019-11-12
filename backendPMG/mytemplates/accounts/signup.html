@@ -12,8 +12,18 @@
       Tell Us About Yourself!!
     </div>   
     <div class="signupfields">
-      <form action="#" method="post">
+      <form action="{% url 'signup' %}" method="POST">
+        {% csrf_token %}
           <div class="flabel">
+              {% if messages %}
+              <ul class="messages">
+                  {% for message in messages %}
+                
+                    {% if message.tags %} {% endif %} <div class="msg" style="color: red; font-size:95%">{{ message }}</div>
+            
+                  {% endfor %}
+              </ul>
+              {% endif %}
             <input type="text" name="fname" class="finput" placeholder="First Name" required>
           </div>
         <div class="flabel">
@@ -29,14 +39,14 @@
           <input type="password" name="password" class="finput" placeholder="Password" required>
         </div>
         <div class="flabel">
-          <input type="password" name="password" class="finput" placeholder="Confirm Password" required>
+          <input type="password" name="password1" class="finput" placeholder="Confirm Password" required>
         </div>
         <div class="flabel">
           <input type="radio" name="category" value="student" required><span>Student</span>
           <input type="radio" name="category" value="teacher" required><span>Teacher</span> 
         </div>
         <div class="flabel">
-          <input type="checkbox" name="terms" value="terms" required>
+          <input type="checkbox" name="terms" required>
           <span><a href="#" class="link">I Agree To The Terms & Conditions</a></span>
         </div>
         <div class="flabel">
