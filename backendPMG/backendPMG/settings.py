@@ -31,7 +31,7 @@ ALLOWED_HOSTS = ['*']
 # Application definition
 
 INSTALLED_APPS = [
-    'teachers.apps.TeachersConfig',
+    'gurus.apps.GurusConfig',
     'aboutus.apps.AboutusConfig',
     'accounts.apps.AccountsConfig',
     'addTeacher.apps.AddteacherConfig',
@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'multiselectfield',
 ]
 
 MIDDLEWARE = [
@@ -130,3 +131,6 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'backendPMG/mystatic')
 ]
 
+# MEDIA FOLDER SETTINGS
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
