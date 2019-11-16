@@ -40,6 +40,12 @@ class AddTeacher(models.Model):
     ('15yr', '15yr'),
     ('15plus', '15plus')
   )
+  INSTITUTE = (
+    ('svit', 'svit'),
+    ('bmsit','bmsit'),
+    ('presidency','presidency'),
+    ('ramaiah','ramaiah')
+  )
 
   userID = models.ForeignKey(Signups, on_delete=models.CASCADE)
   addteacherID = models.AutoField(primary_key=True)
@@ -50,12 +56,15 @@ class AddTeacher(models.Model):
     # instituteId = models.ForeignKey(Schools, on_delete=models.CASCADE)
   # else :
     # instituteId = models.ForeignKey(Colleges, on_delete = models.DO_NOTHING)
+  institute = models.CharField(max_length = 50, choices = INSTITUTE)
   subjects = MultiSelectField(choices = SUBJECTS)
   age = models.IntegerField(default = 23)
   expirence = models.CharField(choices = EXPIRENCE, max_length = 50)
-  # image = models.ImageField(uplaod_to = 'photos/teachers/addteachers', blank = True)
+  # image = models.ImageField(upload_to = 'photos/teachers/addteachers', blank = True)
   moto = models.TextField()
-  datetime = models.DateTimeField(default = datetime.now())
+  # datetime = models.DateTimeField(default = datetime.now())
+  datetime = models.DateTimeField(auto_now_add=True)
+
   def __str__(self):
     return self.firstName + ' ' + self.lastName
 

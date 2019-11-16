@@ -5,6 +5,11 @@
 {% block content %}
 
 <link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}">
+<form method="post" enctype="multipart/form-data">
+  {% csrf_token %}
+  <input type="file" name="doc">
+  <button type="submit">upload file</button>
+</form>
 
 <section class="cover">
   <div class="covertext">

@@ -10,7 +10,8 @@
   <div class="singnindiv">
     <div class="boxes">
       <form method="POST"  action="{% url 'signin' %}" class="form">
-          {% csrf_token %}
+        {% csrf_token %}
+        
           {% if messages %}
               <ul class="messages">
                   {% for message in messages %}

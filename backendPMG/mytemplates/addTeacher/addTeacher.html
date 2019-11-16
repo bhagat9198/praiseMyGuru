@@ -15,13 +15,13 @@
     <img class="teacherpic" src="{% static 'material/pics/teacher.png' %}">
   </div>
   <div class="teacherform">
-    <form class="tf" action="POST">
+    <form class="tf" method = "{% url 'addTeacher' %}" action="POST">
       <div class="teacherdetails">
         <div class="ffield">
           <label for="firstname">First Name</label>
         </div>
         <div class="teacherdetailsfield">
-            <input type="text" name="name" required>
+            <input type="text" name="firstname" required>
         </div>
       </div>
       <div class="teacherdetails">
@@ -50,8 +50,9 @@
         <div class="teacherdetailsfield">
           <select name="institudename" required>
             <option value="svit">Sai Vidya Institude Of Technology</option>
-            <option value="svit1">Sai Vidya Institude Of Technology1</option>
-            <option value="svit2">Sai Vidya Institude Of Technology2</option>
+            <option value="reva">Reva</option>
+            <option value="ramaiah">Ramaiah Institute of Technology</option>
+            <option value="presidency">Presidency College</option>
             <option value="bmsit">BMSIT</option>
           </select>
         </div>
@@ -61,24 +62,24 @@
           <label for="subjects">Subjects</label>
         </div> 
         <div class="teacherdetailsfield">
-          <div class="subjectscheckbox"><input type="checkbox" name="subjects" class="sub" value="civil">Civil</div>  
-          <div class="subjectscheckbox"><input type="checkbox" name="subjects" class="sub" value="se">Software Enggineering</div>  
-          <div class="subjectscheckbox"><input type="checkbox" name="subjects" class="sub" value="co">Computer Organization</div>
-          <div class="subjectscheckbox"><input type="checkbox" name="subjects" class="sub" value="algorthiums">Algorithums</div>
-          <div class="subjectscheckbox"><input type="checkbox" name="subjects" class="sub" value="ds">Data Structures</div>
-          <div class="subjectscheckbox"><input type="checkbox" name="subjects" class="sub" value="c">C</div>
-          <div class="subjectscheckbox"><input type="checkbox" name="subjects" class="sub" value="math">Mathematics</div>
-          <div class="subjectscheckbox"><input type="checkbox" name="subjects" class="sub" value="physics">Physics</div>
-          <div class="subjectscheckbox"><input type="checkbox" name="subjects" class="sub" value="chemistry">Chemistry</div>
-          <div class="subjectscheckbox"><input type="checkbox" name="subjects" class="sub" value="mechnical">Mechnical</div>
-          <div class="subjectscheckbox"><input type="checkbox" name="subjects" class="sub" value="electrical">Electrical</div>
-          <div class="subjectscheckbox"><input type="checkbox" name="subjects" class="sub" value="electronics">Electronics</div>
-          <div class="subjectscheckbox"><input type="checkbox" name="subjects" class="sub" value="atc">AT&C</div>
-          <div class="subjectscheckbox"><input type="checkbox" name="subjects" class="sub" value="advjava">Java</div>
-          <div class="subjectscheckbox"><input type="checkbox" name="subjects" class="sub" value="cn">Networking</div>
-          <div class="subjectscheckbox"><input type="checkbox" name="subjects" class="sub" value="management">Management for IT</div>
-          <div class="subjectscheckbox"><input type="checkbox" name="subjects" class="sub" value="dotnet">Dot Net</div>
-          <div class="subjectscheckbox"><input type="checkbox" name="subjects" class="sub" value="dbms">DBMS</div>
+          <div class="subjectscheckbox"><input type="checkbox" name="subjects[]" class="sub" value="civil">Civil</div>  
+          <div class="subjectscheckbox"><input type="checkbox" name="subjects[]" class="sub" value="se">Software Enggineering</div>  
+          <div class="subjectscheckbox"><input type="checkbox" name="subjects[]" class="sub" value="co">Computer Organization</div>
+          <div class="subjectscheckbox"><input type="checkbox" name="subjects[]" class="sub" value="algorthiums">Algorithums</div>
+          <div class="subjectscheckbox"><input type="checkbox" name="subjects[]" class="sub" value="ds">Data Structures</div>
+          <div class="subjectscheckbox"><input type="checkbox" name="subjects[]" class="sub" value="c">C</div>
+          <div class="subjectscheckbox"><input type="checkbox" name="subjects[]" class="sub" value="math">Mathematics</div>
+          <div class="subjectscheckbox"><input type="checkbox" name="subjects[]" class="sub" value="physics">Physics</div>
+          <div class="subjectscheckbox"><input type="checkbox" name="subjects[]" class="sub" value="chemistry">Chemistry</div>
+          <div class="subjectscheckbox"><input type="checkbox" name="subjects[]" class="sub" value="mechnical">Mechnical</div>
+          <div class="subjectscheckbox"><input type="checkbox" name="subjects[]" class="sub" value="electrical">Electrical</div>
+          <div class="subjectscheckbox"><input type="checkbox" name="subjects[]" class="sub" value="electronics">Electronics</div>
+          <div class="subjectscheckbox"><input type="checkbox" name="subjects[]" class="sub" value="atc">AT&C</div>
+          <div class="subjectscheckbox"><input type="checkbox" name="subjects[]" class="sub" value="advjava">Java</div>
+          <div class="subjectscheckbox"><input type="checkbox" name="subjects[]" class="sub" value="cn">Networking</div>
+          <div class="subjectscheckbox"><input type="checkbox" name="subjects[]" class="sub" value="management">Management for IT</div>
+          <div class="subjectscheckbox"><input type="checkbox" name="subjects[]" class="sub" value="dotnet">Dot Net</div>
+          <div class="subjectscheckbox"><input type="checkbox" name="subjects[]" class="sub" value="dbms">DBMS</div>
         </div>
       </div>
       <div class="teacherdetails">
@@ -123,7 +124,7 @@
       <div class="teacherdetails">
         <div class="teacherdetailsfield">
           <div class="ffield">
-            <input type="submit">
+            <input type="submit" name = "submit">
           </div>
         </div>
       </div>
