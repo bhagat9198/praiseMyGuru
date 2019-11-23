@@ -5,11 +5,68 @@
 {% block content %}
 
 <link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}">
-<form method="post" enctype="multipart/form-data">
+<form action="{% url 'home' %}" method="POST"  enctype="multipart/form-data">
   {% csrf_token %}
-  <input type="file" name="doc">
-  <button type="submit">upload file</button>
+  <input type="text" name='name'>
+  <input type="range" name="range">
+  <button type="submit">submit</button>
 </form>
+  <!-- <div class="teacherdetailsfield"> 
+    <textarea name="text"></textarea> -->
+    <!-- <div class="teacherdetailsfield">
+      <div class="yearradio"><input type="radio" name="expirance" required value="1y"> Around 1 year</div>
+      <div class="yearradio"><input type="radio" name="expirance" required value="2y"> Around 2 year</div>
+      <div class="yearradio"><input type="radio" name="expirance" required value="3y"> Around 3 year</div>
+      <div class="yearradio"><input type="radio" name="expirance" required value="5y"> Around 5 year</div>
+      <div class="yearradio"><input type="radio" name="expirance" required value="8y"> Around 8 year</div>
+      <div class="yearradio"><input type="radio" name="expirance" required value="10y"> Around 10 year</div>
+      <div class="yearradio"><input type="radio" name="expirance" required value="15y"> Around 15 year</div>
+      <div class="yearradio"><input type="radio" name="expirance" required value="15plusy"> more then 15 year</div>
+    </div> -->
+
+
+      <!-- <input type="file" name="img" >  -->
+      <!-- <input type="number" name = "num"> -->
+
+      <!-- <select name="institudename" required>
+          <option value="svit">Sai Vidya Institude Of Technology</option>
+          <option value="reva">Reva</option>
+          <option value="ramaiah">Ramaiah Institute of Technology</option>
+          <option value="presidency">Presidency College</option>
+          <option value="bmsit">BMSIT</option>
+        </select> -->
+
+      <!-- {% for value, text in home.models.providers.field.choices %}
+      <div class="ui slider checkbox">
+        <input id="id_providers_{{ forloop.counter0 }}" name="{{ home.models.SU }}" type="checkbox" value="{{ value }}"{% if value in checked_providers %} checked="checked"{% endif %}>
+        <label>{{ text }}</label>
+      </div>
+    {% endfor %} -->
+
+
+      <!-- <div class="subjectscheckbox"><input type="checkbox" name="subjects" class="sub" value="civil">Civil</div>  
+      <div class="subjectscheckbox"><input type="checkbox" name="subjects" class="sub" value="se">Software Enggineering</div>  
+      <div class="subjectscheckbox"><input type="checkbox" name="subjects" class="sub" value="co">Computer Organization</div>
+      <div class="subjectscheckbox"><input type="checkbox" name="subjects" class="sub" value="algorthiums">Algorithums</div>
+      <div class="subjectscheckbox"><input type="checkbox" name="subjects" class="sub" value="ds">Data Structures</div>
+      <div class="subjectscheckbox"><input type="checkbox" name="subjects" class="sub" value="c">C</div>
+      <div class="subjectscheckbox"><input type="checkbox" name="subjects" class="sub" value="math">Mathematics</div> -->
+      
+      
+      <!-- <div class="subjectscheckbox"><input type="checkbox" name="subjects[]" class="sub" value="physics">Physics</div>
+      <div class="subjectscheckbox"><input type="checkbox" name="subjects[]" class="sub" value="chemistry">Chemistry</div>
+      <div class="subjectscheckbox"><input type="checkbox" name="subjects[]" class="sub" value="mechnical">Mechnical</div>
+      <div class="subjectscheckbox"><input type="checkbox" name="subjects[]" class="sub" value="electrical">Electrical</div>
+      <div class="subjectscheckbox"><input type="checkbox" name="subjects[]" class="sub" value="electronics">Electronics</div>
+      <div class="subjectscheckbox"><input type="checkbox" name="subjects[]" class="sub" value="atc">AT&C</div>
+      <div class="subjectscheckbox"><input type="checkbox" name="subjects[]" class="sub" value="advjava">Java</div>
+      <div class="subjectscheckbox"><input type="checkbox" name="subjects[]" class="sub" value="cn">Networking</div>
+      <div class="subjectscheckbox"><input type="checkbox" name="subjects[]" class="sub" value="management">Management for IT</div>
+      <div class="subjectscheckbox"><input type="checkbox" name="subjects[]" class="sub" value="dotnet">Dot Net</div>
+      <div class="subjectscheckbox"><input type="checkbox" name="subjects[]" class="sub" value="dbms">DBMS</div> -->
+    <!-- </div>
+    <input type="submit" name="submit">
+</form> -->
 
 <section class="cover">
   <div class="covertext">

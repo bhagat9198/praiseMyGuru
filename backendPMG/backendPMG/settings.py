@@ -31,10 +31,10 @@ ALLOWED_HOSTS = ['*']
 # Application definition
 
 INSTALLED_APPS = [
+    'add.apps.AddConfig',
     'gurus.apps.GurusConfig',
     'aboutus.apps.AboutusConfig',
     'accounts.apps.AccountsConfig',
-    'addTeacher.apps.AddteacherConfig',
     'schools.apps.SchoolsConfig',
     'colleges.apps.CollegesConfig',
     'home.apps.HomeConfig',
@@ -113,13 +113,17 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE =  'Asia/Kolkata'
 
 USE_I18N = True
 
-USE_L10N = True
+# USE_L10N = True
 
-USE_TZ = True
+# USE_TZ = True
+
+USE_L10N = False
+
+USE_TZ = False
 
 
 # Static files (CSS, JavaScript, Images)
@@ -128,9 +132,9 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'backendPMG/mystatic')
+    os.path.join(BASE_DIR, 'backendPMG/static')
 ]
 
 # MEDIA FOLDER SETTINGS
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_ROOT  = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'

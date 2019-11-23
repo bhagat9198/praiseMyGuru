@@ -1,0 +1,110 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'css/addInstitute.css' %}">
+
+<section class="institutesec">
+  <div class="institutediv">
+    <div class="boxes">
+      <div class="heading">
+        Add Your College
+      </div>
+      <form class="form" action="{% url 'addInstitute' %}" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="formfield">
+          <input type="text" name="cname" placeholder="Institute Name" required>
+        </div>
+        <div class="formfield">
+          <input type="text" name="clocation" placeholder="Institute Location" required>
+        </div>
+        <div class="formfield">
+          <label for="ccolg" required class="colgtype">Institute Type</label>
+          <div class="checkboxdiv">
+            <div class="outercheck"><input type="checkbox" class="rcolgtype" name="ccolg"  value="engineering">Engineering</div>
+            <div class="outercheck"><input type="checkbox" class="rcolgtype" name="ccolg"  value="law">Law</div>
+            <div class="outercheck"><input type="checkbox" class="rcolgtype" name="ccolg"  value="arts">Arts</div>
+            <div class="outercheck"><input type="checkbox" class="rcolgtype" name="ccolg"  value="commerce">Commerce</div>
+          </div>
+        </div>
+        <div class="formfield">
+          <label for="crate" class="colgtype">Best describe as:</label>
+          <div class="checkboxdiv">
+            <div class="outercheck"><input type="radio" name="crate" required value="prestigious">Prestigious</div>
+            <div class="outercheck"><input type="radio" name="crate" required value="decent">Decent</div>
+            <div class="outercheck"><input type="radio" name="crate" required value="avg">Average</div>
+          </div>
+        </div>
+        <div class="formfield">
+          <input type="text" name="cwebsite" placeholder="Institute website">
+        </div>
+        <div class="formfield">
+          <input type="number" name="cphoneno" placeholder="Institute Contact No">
+        </div>
+        <div class="formfield">
+          <input type="number" name="cyear" placeholder="Institute Founded">
+        </div>
+        <div class="formfield">
+            <label class="colgtype" for="cpicc">College Pic</label>
+            <input type="file" name="cpicc" accept="image/*">
+        </div>
+        <div class="formfield">
+          <input type="submit" name="collegeSubmit" value="Publish Your College">
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="institutediv">
+    <div class="boxes">
+      <div class="heading">
+        Add Your School
+      </div>
+      <form class="form" action="{% url 'addInstitute' %}" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="formfield">
+          <input type="text" name="sname" placeholder="Institute Name" required >
+        </div>
+        <div class="formfield">
+          <input type="text" name="slocation" placeholder="Institute Location" required >
+        </div>
+        <div class="formfield">
+          <label for="scolg" class="colgtype" required>Institute Type</label>
+          <div class="checkboxdiv">
+            <div class="outercheck"><input type="checkbox"  class="rcolgtype" name="scolg" value="engineering"><span>Kidargarden</span></div>   
+            <div class="outercheck"><input type="checkbox"  class="rcolgtype" name="scolg" value="law">Primary</div>
+            <div class="outercheck"><input type="checkbox"  class="rcolgtype" name="scolg" value="arts">HighSchool</div>
+            <div class="outercheck"><input type="checkbox"  class="rcolgtype" name="scolg" value="commerce"><span>PreUniversity</span> </div>
+          </div>
+        </div>
+        <div class="formfield">
+          <label for="rate" class="colgtype">Best describe as:</label>
+          <div class="checkboxdiv">
+            <div class="outercheck"><input type="radio" required name="srate" value="prestigious">Prestigious</div>
+            <div class="outercheck"><input type="radio" required name="srate" value="decent">Decent</div>
+            <div class="outercheck"><input type="radio" required name="srate" value="avg">Average</div>
+          </div>
+        </div>
+        <div class="formfield">
+          <input type="text" name="swebsite" placeholder="Institute website">
+        </div>
+        <div class="formfield">
+          <input type="number" name="sphoneno" placeholder="Institute Contact No">
+        </div>
+        <div class="formfield">
+          <input type="number" name="syear" placeholder="Institute Founded">
+        </div>
+        <div class="formfield">
+          <label class="colgtype" for="spicc">School Pic</label>
+          <input type="file" name="spicc" accept="image/*">
+        </div>
+        <div class="formfield">
+          <input type="submit" name="schoolSubmit" value="Publish Your School">
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

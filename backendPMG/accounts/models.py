@@ -1,6 +1,7 @@
 from django.db import models
 from django import forms
 from datetime import datetime
+from django.utils import timezone
 
 # Create your models here.
 
@@ -17,6 +18,7 @@ class Signups(models.Model):
   confirmPassword = models.CharField(max_length = 15)
   category = models.CharField(choices = CHOICES, max_length = 10)
   agreeTerms = models.BooleanField(default = True)
-  dateTime = models.DateTimeField(default = datetime.now())
+  dateTime = models.DateTimeField(timezone.now())
+  
   def __str__(self):
     return self.userName

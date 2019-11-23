@@ -1,6 +1,6 @@
 from django.db import models
 from multiselectfield import MultiSelectField
-from addTeacher.models import AddTeacher
+from add.models import AddTeacher
 from accounts.models import Signups
 from datetime import datetime
 
@@ -14,6 +14,7 @@ class Praise(models.Model):
     ('4','4'),
     ('5','5'),
   )
+
   SUBJECTS = (
     ('civil', 'civil'),
     ('compuer organization', 'compuer organization'),
@@ -34,6 +35,7 @@ class Praise(models.Model):
     ('management fot it','management fot it'),
     ('dbms','dbms'),
   )
+  
   TAGS = (
     ('Respected','Respected'),
     ('Gives Homework','Gives Homework'),

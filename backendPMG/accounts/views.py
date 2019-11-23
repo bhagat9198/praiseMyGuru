@@ -1,12 +1,20 @@
 from django.shortcuts import render, redirect
 from .models import Signups
 from datetime import datetime
+from django.utils import timezone
 from django.template import RequestContext
 from django.contrib import messages
 from django.contrib.auth.models import User
-from  django.contrib import auth
+from django.contrib import auth
+from django.contrib.auth import logout
 
 # Create your views here.
+def signout(request) :
+  if request.method == 'POST' :
+    auth.logout(request)
+    messages.add_message(request, messages.SUCCESS, 'You are logged out !')
+    return render(request, 'home/home.html')
+
 def signin(request) :
   if request.method == 'POST':
     uname = request.POST['username']
@@ -16,7 +24,7 @@ def signin(request) :
     if user is not None:
       auth.login(request, user)
       messages.add_message(request, messages.SUCCESS, 'You are logged in!')
-      return redirect('home')
+      return redirect('dashbord')
     else :
       messages.add_message(request, messages.INFO, 'Username or password incorrect')
       return redirect('signin')
@@ -60,5 +68,6 @@ def signup(request) :
   else :
     return render(request, 'accounts/signup.html')
 
-
+def dashbord(request) :
+  return render(request, 'accounts/dashbord.html')
   

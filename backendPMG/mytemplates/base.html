@@ -9,10 +9,11 @@
   <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>PraiseMyGuru</title>
-  <link type="text/css" rel="stylesheet" href="{% static 'css/base.css' %}">
-  <link type="text/css" rel="stylesheet" href="{% static 'material/bootstrap-4.3.1-dist/css/bootstrap.css' %}">
+
 </head>
 <body>
+<link type="text/css" rel="stylesheet" href="{% static 'css/base.css' %}">
+<link type="text/css" rel="stylesheet" href="{% static 'material/bootstrap-4.3.1-dist/css/bootstrap.css' %}">
   
 {% include 'partials/__navbar.html' %}
 
@@ -22,8 +23,8 @@
 
 {% include 'partials/__footer.html' %}
 
-<script src="./material/jquery.js"></script>
-<script src="./material/bootstrap-4.3.1-dist/js/bootstrap.js"></script>
-<script scr="./index.js"></script>
+<script src="{% static './material/jquery.js' %}"></script>
+<script src="{% static './material/bootstrap-4.3.1-dist/js/bootstrap.js' %}"></script>
+<script scr="{% static './index.js' %}"></script>
 </body>
 </html>
