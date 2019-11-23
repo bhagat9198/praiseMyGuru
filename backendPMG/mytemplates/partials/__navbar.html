@@ -12,5 +12,16 @@
   <div class=" navlabel" ><a href="{% url 'gurusList' %}">Guru's</a> </div>
   <div class=" navlabel" ><a href="{% url 'addTeacher' %}">Add your Guru</a> </div>
   <div class=" navlabel" ><a href="{% url 'aboutus' %}">About Us</a></div>
-  <div class=" navlabel" ><a href="{% url 'signin' %}">Register / LogIn</a></div>  
+  {% if user.is_authenticated %}
+  <div class=" navlabel" >
+    <a href="{% url 'dashbord' %}">Hello {{user.username}} !!</a>
+  <a href="javascript:{document.getElementById('signout').submit()}">Logout</a>
+  <form action="{% url 'signout' %}" method="POST" id="signout">
+    {% csrf_token %}
+    <input type="hidden">
+  </form>
+  {% else %}
+    <div class=" navlabel" ><a href="{% url 'signin' %}">Register / LogIn</a></div>  
+  {% endif %}
+  </div>
 </section>

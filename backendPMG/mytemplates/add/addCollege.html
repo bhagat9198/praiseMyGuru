@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<link rel="stylesheet" type="text/css" href="{% static './css/addSchool.css' %}">
+
+<section class="institutesec">
+  <div class="institutediv">
+    <div class="boxes">
+      <div class="heading">
+        Add Your College
+      </div>
+      <form class="form" action="{% url 'addCollege' %}" method="POST" enctype="multipart/form-data">
+          {% csrf_token %}
+        <div class="formfield">
+          <input type="text" name="name" placeholder="Institute Name" required>
+        </div>
+        <div class="formfield">
+          <input type="text" name="location" placeholder="Institute Location" required>
+        </div>
+        <div class="formfield">
+          <label for="colg" required class="colgtype">Institute Type</label>
+          <div class="checkboxdiv">
+            <div class="outercheck"><input type="checkbox" class="rcolgtype" name="colg"  value="engineering">Engineering</div>
+            <div class="outercheck"><input type="checkbox" class="rcolgtype" name="colg"  value="law">Law</div>
+            <div class="outercheck"><input type="checkbox" class="rcolgtype" name="colg"  value="arts">Arts</div>
+            <div class="outercheck"><input type="checkbox" class="rcolgtype" name="colg"  value="commerce">Commerce</div>
+          </div>
+        </div>
+        <div class="formfield">
+          <label for="rate" class="colgtype">Best describe as:</label>
+          <div class="checkboxdiv">
+            <div class="outercheck"><input type="radio" name="rate" required value="prestigious">Prestigious</div>
+            <div class="outercheck"><input type="radio" name="rate" required value="decent">Decent</div>
+            <div class="outercheck"><input type="radio" name="rate" required value="avg">Average</div>
+          </div>
+        </div>
+        <div class="formfield">
+          <input type="text" name="website" placeholder="Institute website">
+        </div>
+        <div class="formfield">
+          <input type="number" name="phoneno" placeholder="Institute Contact No">
+        </div>
+        <div class="formfield">
+          <input type="number" name="year" placeholder="Institute Founded">
+        </div>
+        <div class="formfield">
+          <input type="file" name="pic2" accept="images/*">
+        </div>
+        <div class="formfield">
+          <button type="submit">Publish Your College</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="institutediv">
+    <div class="quote">
+      <p>
+        “ ... and in between <br> fresher's <br> and farewell, <br> life  <br> happens!! ”
+      </p>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

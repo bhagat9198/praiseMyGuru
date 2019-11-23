@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link href="https://fonts.googleapis.com/css?family=Concert+One&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>PraiseMyGuru</title>
+  <link type="text/css" rel="stylesheet" href="./addCollege.css">
+  <link type="text/css" rel="stylesheet" href="../material/bootstrap-4.3.1-dist/css/bootstrap.css">
+</head>
+<body>
+  
+<section class="navbar">
+  <div class="icondiv ">
+    <a href="#">
+      <img src="../material/pics/mainIcon.png" alt="mainiconguru" class="mainicon navlabel">      
+    </a>
+  </div>
+  <div class=" navlabel" ><a href="#">Praise My Guru</a> </div>
+  <div class=" navlabel" ><a href="./colleges/collegesList.html">Colleges</a> </div>
+  <div class=" navlabel" ><a href="../schools/schoolsList.html">Schools</a> </div>
+  <div class=" navlabel" ><a href="../teachers/teachersList.html">Guru's</a> </div>
+  <div class=" navlabel" ><a href="../addTeacher/addTeacher.html">Add your Guru</a> </div>
+  <div class=" navlabel"><a href="../aboutus/aboutus.html">About Us</a></div>
+  <div class=" navlabel"><a href="../signin/signin.html">Register / LogIn</a></div>  
+</section>
+
+
+<section class="institutesec">
+  <div class="institutediv">
+    <div class="boxes">
+      <div class="heading">
+        Add Your College
+      </div>
+      <form class="form">
+        <div class="formfield">
+          <input type="text" name="name" placeholder="Institute Name" required>
+        </div>
+        <div class="formfield">
+          <input type="text" name="location" placeholder="Institute Location" required>
+        </div>
+        <div class="formfield">
+          <label for="colg" class="colgtype">Institute Type</label>
+          <div class="checkboxdiv">
+            <div class="outercheck"><input type="checkbox" class="rcolgtype" name="colg" required value="engineering">Engineering</div>
+            <div class="outercheck"><input type="checkbox" class="rcolgtype" name="colg" required value="law">Law</div>
+            <div class="outercheck"><input type="checkbox" class="rcolgtype" name="colg" required value="arts">Arts</div>
+            <div class="outercheck"><input type="checkbox" class="rcolgtype" name="colg" required value="commerce">Commerce</div>
+          </div>
+        </div>
+        <div class="formfield">
+          <label for="rate" class="colgtype">Best describe as:</label>
+          <div class="checkboxdiv">
+            <div class="outercheck"><input type="radio" name="rate" required value="prestigious">Prestigious</div>
+            <div class="outercheck"><input type="radio" name="rate" required value="decent">Decent</div>
+            <div class="outercheck"><input type="radio" name="rate" required value="avg">Average</div>
+          </div>
+        </div>
+        <div class="formfield">
+          <input type="url" name="website" placeholder="Institute website">
+        </div>
+        <div class="formfield">
+          <input type="number" name="phoneno" placeholder="Institute Contact No">
+        </div>
+        <div class="formfield">
+          <input type="number" name="year" max="4" min="4" placeholder="Institute Founded">
+        </div>
+        <div class="formfield">
+          <button type="submit">Publish Your College</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="institutediv">
+    <div class="quote">
+      <p>
+        “ ... and in between <br> fresher's <br> and farewell, <br> life  <br> happens!! ”
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="footer">
+  <h1>2019@Copyright</h1>
+</section>
+
+<script src="../material/jquery.js"></script>
+<script src="../material/bootstrap-4.3.1-dist/js/bootstrap.js"></script>
+
+</body>
+</html>

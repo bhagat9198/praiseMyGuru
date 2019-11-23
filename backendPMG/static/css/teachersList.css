@@ -41,6 +41,7 @@ body {
   background-image: url("../material/pics/teachersListBackground.jpg");
   background-size: cover;
   background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 
