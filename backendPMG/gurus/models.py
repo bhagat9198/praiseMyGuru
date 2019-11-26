@@ -4,9 +4,9 @@ from add.models import AddTeacher
 from accounts.models import Signups
 from datetime import datetime
 
-
 # Create your models here.
 class Praise(models.Model):
+  
   STARS = (
     ('1','1'),
     ('2','2'),
@@ -60,7 +60,7 @@ class Praise(models.Model):
     ('yes','yes'),
     ('no','no'),
   )
-  teacherID = models.AutoField(primary_key=True)
+
   userID = models.ForeignKey(Signups, on_delete = models.DO_NOTHING )
   addteacherID = models.ForeignKey(AddTeacher, on_delete = models.DO_NOTHING)
   teacherID = models.AutoField(primary_key=True)

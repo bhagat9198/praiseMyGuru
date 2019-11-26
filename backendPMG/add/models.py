@@ -51,7 +51,7 @@ class AddTeacher(models.Model):
   )
 
   # userID = models.ForeignKey(User, null=True, blank=True, on_delete = models.CASCADE)
-  # userId = models.ForeignKey(Signups, on_delete = models.CASCADE)
+  userID = models.ForeignKey(Signups,null=True, blank=True, default='0', on_delete = models.CASCADE)
   addteacherID = models.AutoField(primary_key=True)
   firstName = models.CharField(max_length = 15)
   lastName = models.CharField(max_length = 15)
@@ -84,6 +84,8 @@ class AddCollege(models.Model) :
     ('Decent','Decent'),
     ('Average','Average')
   )
+
+  userID = models.ForeignKey(Signups,null=True, blank=True, default='0', on_delete = models.CASCADE)
   name = models.CharField(max_length = 20)
   location = models.CharField(max_length = 20)
   types = MultiSelectField(choices = TYPES)
@@ -110,6 +112,7 @@ class AddSchool(models.Model) :
     ('Decent','Decent'),
     ('Average','Average')
   )
+  userID = models.ForeignKey(Signups,null=True, blank=True, default='0', on_delete = models.CASCADE)
   name = models.CharField(max_length = 20)
   location = models.CharField(max_length = 20)
   types = MultiSelectField(choices = TYPES)

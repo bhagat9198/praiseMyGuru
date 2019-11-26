@@ -4,14 +4,22 @@ from django.core.files.storage import FileSystemStorage
 from datetime import datetime
 from django.utils import timezone
 from django.contrib.auth.models import User 
+from django.contrib.auth.decorators import login_required
+from accounts.models import Signups
 
 # Create your views here.
+
+@login_required(login_url='signin')
 def addTeacher(request) :
   if request.method == 'POST' :
-    # current_user = request.user
-    # current_userID = request.user.id
-    # if request.user
-    # current_userID = 
+    # current_userID = request.user.pk
+    current_userID = Signups.objects.get(pk = 1)
+    # current_userID = Signups.objects.get(id = current_user +1)
+    # user = User.objects.get(id=user_id)
+    # staffprofile.user = user
+    if request.user.is_authenticated :
+      print(request.user.id)
+
     fname = request.POST['firstname']
     lname = request.POST['lastname']
     institute_type = request.POST['Institutetype']
@@ -27,16 +35,17 @@ def addTeacher(request) :
     # , userID = current_userID
     teachermoto = request.POST['teachermoto']
     dateTime = timezone.now()
-    addteacher = AddTeacher(firstName = fname, lastName = lname, instituteType = institute_type, institute = institute_name, subjects = subjects, age = age, image = url, expirence = expirance,  moto = teachermoto, dateTime = dateTime)
+    addteacher = AddTeacher(userID = current_userID, firstName = fname, lastName = lname, instituteType = institute_type, institute = institute_name, subjects = subjects, age = age, image = url, expirence = expirance,  moto = teachermoto, dateTime = dateTime)
     addteacher.save()
     return redirect('home')
 
   else :
     return render(request, 'add/addTeacher.html')
 
-
+@login_required(login_url='signin')
 def addSchool(request) :
   if request.method == 'POST' :
+    current_userID1 = Signups.objects.get(pk = 1)
     name = request.POST['name']
     location = request.POST['location']
     types = request.POST.getlist('colg')
@@ -52,14 +61,16 @@ def addSchool(request) :
     # url1 = fs1.url(imgname1) 
     # image1 = url1, 
 
-    schoolinfo = AddSchool(name = name, location = location, types = types, describe = describe, website = website, phone = phone, founded = founded, dateTime = dateTime)
+    schoolinfo = AddSchool(userID = current_userID1, name = name, location = location, types = types, describe = describe, website = website, phone = phone, founded = founded, dateTime = dateTime)
     schoolinfo.save()
     return redirect('praiseGuru')
   else:
     return render(request, 'add/addSchool.html')
 
+@login_required(login_url='signin')
 def addCollege(request) :
   if request.method == 'POST' :
+    current_userID2 = Signups.objects.get(pk = 1)
     name = request.POST['name']
     location = request.POST['location']
     types = request.POST.getlist('colg')
@@ -77,7 +88,7 @@ def addCollege(request) :
     # image2 = url2,
 
     dateTime = timezone.now();
-    collegeinfo = AddCollege(name = name, location = location, types = types, describe = describe, website = website, phone = phone, founded = founded, dateTime = dateTime)
+    collegeinfo = AddCollege(userID = current_userID2, name = name, location = location, types = types, describe = describe, website = website, phone = phone, founded = founded, dateTime = dateTime)
     collegeinfo.save()
     return redirect('praiseGuru')
   else:

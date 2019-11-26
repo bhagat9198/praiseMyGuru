@@ -10,27 +10,39 @@
   <p>Schools</p>
 </div>
 <section class="colleges">
-  <div class="college">
-    <div class="collegepic">
-      <img class="pic" src="{% static 'material/pics/teacher.png' %}">
+  {% if schoolList %}
+    {% for school in schoolList %}
+      <div class="college">
+        <div class="collegepic">
+          {% if school.image %}
+            <img class="pic" src="{% static 'material/pics/teacher.png' %}">
+          {% else %}
+            <img class="pic" src="{% static 'material/pics/teacher.png' %}">
+          {% endif %}
+          </div>
+        <div class="collegetext ">
+          <div class="cname textdiv">
+          <span class="lhead">Name</span><strong class="colon">:</strong>{{school.name}}
+          </div>
+          <div class="cplace textdiv">
+            <span class="lhead">Loaction</span><strong class="colon">:</strong>{{school.location}}
+          </div>
+          <div class="cplace textdiv">
+            <span class="lhead">Founded</span><strong class="colon">:</strong>{{school.founded}}
+          </div>
+          <div class="cteachers ">
+            <span class="lhead"><a class="tlink" href="{% url 'school' %}">Know more about school</a> </span>
+          </div>
+        </div>  
+      </div>
+    {% endfor %}
+  {% else %}
+    <div>
+      <p>No School's Right now</p>
     </div>
-    <div class="collegetext ">
-      <div class="cname textdiv">
-      <span class="lhead">Name</span><strong class="colon">:</strong>Lorem ipsum
-      </div>
-      <div class="cplace textdiv">
-        <span class="lhead">Loaction</span><strong class="colon">:</strong>Lorem ipsum
-      </div>
-      <div class="cplace textdiv">
-        <span class="lhead">Founded</span><strong class="colon">:</strong>2000
-      </div>
-      <div class="cteachers ">
-        <span class="lhead"><a class="tlink" href="{% url 'school' %}">Know more about school</a> </span>
-      </div>
-    </div>  
-  </div>
+  {% endif %}
 
-  <div class="college">
+  <!-- <div class="college">
     <div class="collegepic">
       <img class="pic" src="{% static '/material/pics/teacher.png' %}">
     </div>
@@ -48,7 +60,7 @@
         <span class="lhead"><a class="tlink" href="{% url 'school' %}">Know more about school</a> </span>
       </div>
     </div>  
-  </div>
+  </div> -->
 </section>
 
 {% endblock %}
