@@ -1,0 +1,12 @@
+Metadata-Version: 1.1
+Name: decorate-url
+Version: 1.1
+Summary: add wrapping whole url in django urls
+Home-page: https://github.com/vorujack/decorate_url
+Author: vorujack
+Author-email: info@jaybird.ir
+License: PSF
+Download-URL: https://github.com/vorujack/decorate_url/tarball/1.1
+Description: UNKNOWN
+Keywords: django url_wrap
+Platform: UNKNOWN

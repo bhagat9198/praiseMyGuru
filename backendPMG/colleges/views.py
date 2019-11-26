@@ -1,8 +1,19 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_list_or_404
+from add.models import AddCollege
 
 # Create your views here.
 def collegesList(request) :
-  return render(request, 'colleges/collegesList.html')
+  collegeList = AddCollege.objects.all()
 
-def college(request, id) :
-  return render(request, 'colleges/college.html')
+  context = {
+    'collegeList' : collegeList
+  }
+  return render(request, 'colleges/collegesList.html', context)
+
+def college(request, college_id) :
+  collegeDetail = get_list_or_404(AddCollege, pk = college_id)
+
+  context = {
+    'collegeDetail' : collegeDetail
+  }
+  return render(request, 'colleges/college.html', context)
