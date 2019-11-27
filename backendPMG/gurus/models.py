@@ -6,7 +6,6 @@ from datetime import datetime
 
 # Create your models here.
 class Praise(models.Model):
-  
   STARS = (
     ('1','1'),
     ('2','2'),
@@ -63,7 +62,7 @@ class Praise(models.Model):
 
   userID = models.ForeignKey(Signups, on_delete = models.DO_NOTHING )
   addteacherID = models.ForeignKey(AddTeacher, on_delete = models.DO_NOTHING)
-  teacherID = models.AutoField(primary_key=True)
+  praiseID = models.AutoField(primary_key=True)
   worthListening = models.IntegerField()
   starts = models.CharField(max_length = 1, choices = STARS)
   subjects = MultiSelectField(choices = SUBJECTS)

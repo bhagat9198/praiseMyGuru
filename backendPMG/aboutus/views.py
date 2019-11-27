@@ -5,8 +5,13 @@ from .models import Feedback
 from django.contrib import messages
 
 # Create your views here.
+
+
 def aboutus(request):
+
   if request.method == 'POST' :
+    # counter = counter + 1
+    # id = counter
     name = request.POST['name']
     email = request.POST['email']
     exp = request.POST['expirence']
@@ -20,3 +25,5 @@ def aboutus(request):
     return render(request, 'aboutus/aboutus.html')
   else:
     return render(request, 'aboutus/aboutus.html')
+
+# counter = 0

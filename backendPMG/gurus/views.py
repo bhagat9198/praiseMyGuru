@@ -18,6 +18,7 @@ def gurusList(request):
   
   return render(request,'gurus/gurusList.html', context)
 
+@login_required(login_url='signin')
 def praiseGuru(request,parise_id):
   gurus = get_object_or_404(AddTeacher, pk = parise_id)
   context = {
@@ -25,9 +26,8 @@ def praiseGuru(request,parise_id):
   }
 
   if request.method == 'POST' :
-    userID = Signups.objects.get(pk = 1)
+    current_userID = Signups.objects.get(userName = request.user.username)
     addteacherID = parise_id
-
     worthListening = request.POST['worthlisten']
     starts = request.POST['star']
     subjects = request.POST.getlist('subjects')
@@ -35,16 +35,15 @@ def praiseGuru(request,parise_id):
     suggest = request.POST['suggest']
     suggestion = request.POST['suggestions']
     datetime = timezone.now()
-
-    praiseinfo = Praise(userID = userID, addteacherID = addteacherID, worthListening =worthListening, starts = starts, subjects = subjects, tags =tags, suggest = suggest, suggestion = suggestion, datetime = datetime)
+    praiseinfo = Praise(userID = current_userID, addteacherID = addteacherID, worthListening =worthListening, starts = starts, subjects = subjects, tags =tags, suggest = suggest, suggestion = suggestion, datetime = datetime)
     praiseinfo.save()
     return render(request,'home/home.html')
   else :
     return render(request,'gurus/praiseGuru.html', context)
 
   
-def guru(request,guru_id):
-  gurus = get_object_or_404(AddTeacher, pk = guru_id)
+def guru(request,pk):
+  gurus = get_object_or_404(AddTeacher, pk = pk)
   context = {
     'gurus' : gurus
   }

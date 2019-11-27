@@ -9,7 +9,7 @@ def schoolsList(request) :
     'schoolList' : schoolList
   }
 
-  return render(request, 'schools/schoolsList.html', context)
+  return render(request,'schools/schoolsList.html', context)
 
 def school(request, id) :
-  return render(request, 'schools/school.html')
+  return render(request,'schools/school.html')

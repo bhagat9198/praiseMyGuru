@@ -234,8 +234,9 @@
 }
 
 .contacttext {
-  display: flex;
+  display: inline;
   padding: 0% 5%;
+  /* flex-direction: column; */
 }
 
 .contactheading {

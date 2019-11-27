@@ -13,12 +13,12 @@ from accounts.models import Signups
 def addTeacher(request) :
   if request.method == 'POST' :
     # current_userID = request.user.pk
-    current_userID = Signups.objects.get(pk = 1)
+    current_userID = Signups.objects.get(userName = request.user.username)
     # current_userID = Signups.objects.get(id = current_user +1)
     # user = User.objects.get(id=user_id)
     # staffprofile.user = user
-    if request.user.is_authenticated :
-      print(request.user.id)
+    # if request.user.is_authenticated :
+      # current_userID = request.user.id
 
     fname = request.POST['firstname']
     lname = request.POST['lastname']
@@ -45,7 +45,7 @@ def addTeacher(request) :
 @login_required(login_url='signin')
 def addSchool(request) :
   if request.method == 'POST' :
-    current_userID1 = Signups.objects.get(pk = 1)
+    current_userID = Signups.objects.get(userName = request.user.username)
     name = request.POST['name']
     location = request.POST['location']
     types = request.POST.getlist('colg')
@@ -61,16 +61,16 @@ def addSchool(request) :
     # url1 = fs1.url(imgname1) 
     # image1 = url1, 
 
-    schoolinfo = AddSchool(userID = current_userID1, name = name, location = location, types = types, describe = describe, website = website, phone = phone, founded = founded, dateTime = dateTime)
+    schoolinfo = AddSchool(userID = current_userID, name = name, location = location, types = types, describe = describe, website = website, phone = phone, founded = founded, dateTime = dateTime)
     schoolinfo.save()
-    return redirect('praiseGuru')
+    return redirect('home')
   else:
     return render(request, 'add/addSchool.html')
 
 @login_required(login_url='signin')
 def addCollege(request) :
   if request.method == 'POST' :
-    current_userID2 = Signups.objects.get(pk = 1)
+    current_userID = Signups.objects.get(userName = request.user.username)
     name = request.POST['name']
     location = request.POST['location']
     types = request.POST.getlist('colg')
@@ -88,8 +88,8 @@ def addCollege(request) :
     # image2 = url2,
 
     dateTime = timezone.now();
-    collegeinfo = AddCollege(userID = current_userID2, name = name, location = location, types = types, describe = describe, website = website, phone = phone, founded = founded, dateTime = dateTime)
+    collegeinfo = AddCollege(userID = current_userID, name = name, location = location, types = types, describe = describe, website = website, phone = phone, founded = founded, dateTime = dateTime)
     collegeinfo.save()
-    return redirect('praiseGuru')
+    return redirect('home')
   else:
     return render(request, 'add/addCollege.html')

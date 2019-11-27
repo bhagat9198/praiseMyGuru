@@ -30,9 +30,21 @@
           <div class="cplace textdiv">
             <span class="lhead">Founded</span><strong class="colon">:</strong>{{school.founded}}
           </div>
-          <div class="cteachers ">
-            <span class="lhead"><a class="tlink" href="{% url 'school' %}">Know more about school</a> </span>
+          <div class="cplace textdiv">
+            <span class="lhead">Type</span><strong class="colon">:</strong>{{school.types}}
           </div>
+          <div class="cplace textdiv">
+            <span class="lhead">Website</span><strong class="colon">:</strong>{{school.website}}
+          </div>
+          <div class="cplace textdiv">
+            <span class="lhead">Contact No.</span><strong class="colon">:</strong>{{school.phone}}
+          </div>
+          <div class="cplace textdiv">
+            <span class="lhead">Description</span><strong class="colon">:</strong>{{school.describe}}
+          </div>
+          <!-- <div class="cteachers ">
+            <span class="lhead"><a class="tlink" href="{% url 'school' %}">Know more about school</a> </span>
+          </div> -->
         </div>  
       </div>
     {% endfor %}

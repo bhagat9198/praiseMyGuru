@@ -14,11 +14,12 @@
     <div class="maincontent">
       <div class="box left">
         <div class="form">
-          <form action="#">
+          <form action="{% url 'dashbord' %}" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
             <div class="field"><textarea name="onmind" placeholder="What's In Your Mind"></textarea></div>
             <div class="field">
               <label for="dp" class="dpuload">Upload your new pic</label>
-              <input type="file" required name="dp" accept="images/*">
+              <input type="file" required name="imgupload" accept="images/*">
             </div>
             <div class="field"><button class="submitbtn" type="submit">Publish to Net!!</button></div>
           </form>

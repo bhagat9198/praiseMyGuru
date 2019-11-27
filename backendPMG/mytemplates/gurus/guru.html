@@ -20,7 +20,7 @@
         <div class="tname">
           <div><h1>{{gurus.firstName}}  {{gurus.lastName}}</h1></div>
           <div><h2>{{gurus.institute}}</h2></div><br><br><br><br>
-          <div><h3>Want to give respect to your Guru?<a class="tnamelink" href="./praise.html">Praise Here!</a></h3></div>
+          <!-- <div><h3>Want to give respect to your Guru?<a class="tnamelink" href="{% url 'praiseGuru' gurus.addteacherID %}">Praise Here!</a></h3></div> -->
         </div>
       </div>
       <div class="infomations infopic">
@@ -58,5 +58,6 @@
     </div>
   </div>
 </section>
+
 
 {% endblock %}

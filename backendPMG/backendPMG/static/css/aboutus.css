@@ -71,9 +71,11 @@ body{
 }
 
 .webtext {
-  display:  flex;
+  /* display:  flex; */
   padding-left: 10%;
-  color: white;
+  color: red;
+  font-size: 120%;
+  
 }
 
 .webiconsdiv {
