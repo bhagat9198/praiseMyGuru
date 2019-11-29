@@ -8,12 +8,13 @@ def collegesList(request) :
   context = {
     'collegeList' : collegeList
   }
-  return render(request, 'colleges/collegesList.html', context)
 
-def college(request, college_id) :
-  collegeDetail = get_list_or_404(AddCollege, pk = college_id)
+  return render(request,'colleges/collegesList.html',context)
+
+def college(request, cid) :
+  collegeDetail = get_list_or_404(AddCollege, pk = cid)
 
   context = {
     'collegeDetail' : collegeDetail
   }
-  return render(request, 'colleges/college.html', context)
+  return render(request,'colleges/college.html',context)

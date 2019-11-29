@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from .models import Signups
+from .models import Signups, Dashbord
 from datetime import datetime
 from django.utils import timezone
 from django.template import RequestContext
@@ -7,6 +7,9 @@ from django.contrib import messages
 from django.contrib.auth.models import User
 from django.contrib import auth
 from django.contrib.auth import logout
+from django.core.files.storage import FileSystemStorage
+from django.contrib.auth.decorators import login_required
+
 
 # Create your views here.
 def signout(request) :
@@ -68,6 +71,21 @@ def signup(request) :
   else :
     return render(request, 'accounts/signup.html')
 
+@login_required(login_url='signin')
 def dashbord(request) :
-  return render(request, 'accounts/dashbord.html')
+  if request.method == 'POST' :
+    current_userID = Signups.objects.get(pk = 1)
+    status = request.POST['onmind']
+    uplaodedFile = request.FILES['imgupload']
+    fs = FileSystemStorage()
+    imgname = fs.save(uplaodedFile.name, uplaodedFile)
+    url = fs.url(imgname)
+    dateTime = timezone.now();
+
+    userdashbord = Dashbord(userID = current_userID, status = status, image = url, dateTime = dateTime)
+    userdashbord.save();
+    return redirect('dashbord')
+  else :
+    
+    return render(request, 'accounts/dashbord.html')
   

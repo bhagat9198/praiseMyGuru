@@ -50,7 +50,7 @@ class AddTeacher(models.Model):
     ('ramaiah','ramaiah')
   )
 
-  # userID = models.ForeignKey(User, null=True, blank=True, on_delete = models.CASCADE)
+  # userID = models.ForeignKey(User, on_delete = models.CASCADE)
   userID = models.ForeignKey(Signups,null=True, blank=True, default='0', on_delete = models.CASCADE)
   addteacherID = models.AutoField(primary_key=True)
   firstName = models.CharField(max_length = 15)
@@ -89,7 +89,7 @@ class AddCollege(models.Model) :
   name = models.CharField(max_length = 20)
   location = models.CharField(max_length = 20)
   types = MultiSelectField(choices = TYPES)
-  describe = models.CharField(max_length = 20, choices = DESCRIBE)
+  describe = models.CharField(max_length = 200, choices = DESCRIBE)
   website = models.CharField(max_length = 50)
   phone = models.IntegerField(max_length = 12)
   founded = models.IntegerField(max_length = 4)

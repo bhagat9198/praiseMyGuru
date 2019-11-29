@@ -20,6 +20,8 @@ class Feedback(models.Model) :
     ('Guru','Guru'),
     ('Other profession', 'Other profession')
   )
+
+  # id = models.AutoField(primary_key=True, )
   name = models.CharField(max_length=20)
   email = models.EmailField(max_length = 20)
   exp = models.CharField(max_length = 20, choices=EXPIRENCE)
