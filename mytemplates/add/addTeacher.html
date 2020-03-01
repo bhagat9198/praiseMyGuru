@@ -1,0 +1,145 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<link rel="stylesheet" type="text/css" href="{% static './css/addTeacher.css' %}">
+
+<div class="heading">
+  <p>Add Your Guru!!</p>
+</div>
+<section class="addteacher">
+    
+  <div class="teacherpicdiv">
+    <div class="onlypic">
+      <img class="teacherpic" src="{% static 'material/pics/teacher.png' %}">
+    </div>
+    <div class="notice">
+      <p>If your guru's institute in which he/she teaches is not present, kindly give a minute to add that institute.</p> 
+      <a href="{% url 'addCollege' %}">Add College</a> <br>
+      <a href="{% url 'addSchool' %}">Add School</a> <br>
+    </div>
+  </div>
+  
+  <div class="teacherform">
+    <!-- <form  method = "{% url 'addTeacher' %}" action="POST"> -->
+    <form action="{% url 'addTeacher' %}" method="POST"  enctype="multipart/form-data" class="tf">
+      {% csrf_token %}
+      <div class="teacherdetails">
+        <div class="ffield">
+          <label for="firstname">First Name</label>
+        </div>
+        <div class="teacherdetailsfield">
+            <input type="text" name="firstname" required>
+        </div>
+      </div>
+      <div class="teacherdetails">
+        <div class="ffield">
+          <label for="lastname">Last Name</label>
+        </div>
+        <div class="teacherdetailsfield">
+          <input type="text" name="lastname" required>
+        </div>
+      </div>
+      <div class="teacherdetails">
+        <div class="ffield">
+          <label for="Institutetype">Institute Type</label>
+        </div>      
+        <div class="teacherdetailsfield">        
+          <select name="Institutetype" required>
+            <option value="school">School</option>
+            <option value="college">Colleges</option>
+          </select>
+        </div>
+      </div>
+      <div class="teacherdetails">
+        <div class="ffield">
+          <label for="institudename">Institute Name</label>
+        </div>
+        <div class="teacherdetailsfield">
+          <select name="institudename" required>
+            <option value="svit">Sai Vidya Institude Of Technology</option>
+            <option value="reva">Reva</option>
+            <option value="ramaiah">Ramaiah Institute of Technology</option>
+            <option value="presidency">Presidency College</option>
+            <option value="bmsit">BMSIT</option>
+          </select>
+        </div>
+      </div>
+      <div class="teacherdetails">
+        <div class="ffield">
+          <label for="subjects">Subjects</label>
+        </div> 
+        <div class="teacherdetailsfield">
+          <div class="subjectscheckbox"><input type="checkbox" name="subjects" class="sub" value="civil">Civil</div>  
+          <div class="subjectscheckbox"><input type="checkbox" name="subjects" class="sub" value="se">Software Enggineering</div>  
+          <div class="subjectscheckbox"><input type="checkbox" name="subjects" class="sub" value="co">Computer Organization</div>
+          <div class="subjectscheckbox"><input type="checkbox" name="subjects" class="sub" value="algorthiums">Algorithums</div>
+          <div class="subjectscheckbox"><input type="checkbox" name="subjects" class="sub" value="ds">Data Structures</div>
+          <div class="subjectscheckbox"><input type="checkbox" name="subjects" class="sub" value="c">C</div>
+          <div class="subjectscheckbox"><input type="checkbox" name="subjects" class="sub" value="math">Mathematics</div>
+          <div class="subjectscheckbox"><input type="checkbox" name="subjects" class="sub" value="physics">Physics</div>
+          <div class="subjectscheckbox"><input type="checkbox" name="subjects" class="sub" value="chemistry">Chemistry</div>
+          <div class="subjectscheckbox"><input type="checkbox" name="subjects" class="sub" value="mechnical">Mechnical</div>
+          <div class="subjectscheckbox"><input type="checkbox" name="subjects" class="sub" value="electrical">Electrical</div>
+          <div class="subjectscheckbox"><input type="checkbox" name="subjects" class="sub" value="electronics">Electronics</div>
+          <div class="subjectscheckbox"><input type="checkbox" name="subjects" class="sub" value="atc">AT&C</div>
+          <div class="subjectscheckbox"><input type="checkbox" name="subjects" class="sub" value="advjava">Java</div>
+          <div class="subjectscheckbox"><input type="checkbox" name="subjects" class="sub" value="cn">Networking</div>
+          <div class="subjectscheckbox"><input type="checkbox" name="subjects" class="sub" value="management">Management for IT</div>
+          <div class="subjectscheckbox"><input type="checkbox" name="subjects" class="sub" value="dotnet">Dot Net</div>
+          <div class="subjectscheckbox"><input type="checkbox" name="subjects" class="sub" value="dbms">DBMS</div>
+        </div>
+      </div>
+      <div class="teacherdetails">
+        <div class="ffield">
+          <label for="age">Age</label>
+        </div>
+        <div class="teacherdetailsfield">
+          <input type="number" required name="age" min="18" max="80">
+        </div>
+      </div>
+      <div class="teacherdetails">
+        <div class="ffield">
+          <label for="expirance">Expirence</label>
+        </div>
+        <div class="teacherdetailsfield">
+          <div class="yearradio"><input type="radio" name="expirance" required value="1y"> Around 1 year</div>
+          <div class="yearradio"><input type="radio" name="expirance" required value="2y"> Around 2 year</div>
+          <div class="yearradio"><input type="radio" name="expirance" required value="3y"> Around 3 year</div>
+          <div class="yearradio"><input type="radio" name="expirance" required value="5y"> Around 5 year</div>
+          <div class="yearradio"><input type="radio" name="expirance" required value="8y"> Around 8 year</div>
+          <div class="yearradio"><input type="radio" name="expirance" required value="10y"> Around 10 year</div>
+          <div class="yearradio"><input type="radio" name="expirance" required value="15y"> Around 15 year</div>
+          <div class="yearradio"><input type="radio" name="expirance" required value="15plusy"> more then 15 year</div>
+        </div>
+      </div>
+      <div class="teacherdetails">
+        <div class="ffield">        
+          <label for="imgupload">Uplaod the imgage</label>
+        </div>
+        <div class="teacherdetailsfield">
+          <input type="file" required name="imgupload" >
+        </div>
+      </div>
+      <div class="teacherdetails">
+        <div class="ffield">
+          <label for="teachermoto">Teacher Moto</label>
+        </div>
+        <div class="teacherdetailsfield">        
+          <textarea name="teachermoto" required placeholder="Guru's best described in one line!!"></textarea>
+        </div>
+      </div>
+      <div class="teacherdetails">
+        <div class="teacherdetailsfield">
+          <div class="ffield">
+            <input type="submit" name = "submit">
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</section>
+
+{% endblock %}

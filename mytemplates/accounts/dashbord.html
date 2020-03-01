@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'css/dashbord.css' %}">
+
+<section class="aboutusec">
+  <div class="aboutudiv">
+    <div class="heading">
+      <p>All About You</p>
+    </div>
+    <div class="maincontent">
+      <div class="box left">
+        <div class="form">
+          <form action="{% url 'dashbord' %}" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="field"><textarea name="onmind" placeholder="What's In Your Mind"></textarea></div>
+            <div class="field">
+              <label for="dp" class="dpuload">Upload your new pic</label>
+              <input type="file" required name="imgupload" accept="images/*">
+            </div>
+            <div class="field"><button class="submitbtn" type="submit">Publish to Net!!</button></div>
+          </form>
+        </div>
+        <div class="notform">
+          <div class="detail">
+            <div class="label">Name</div><div class="colon"> : </div>
+            <div class="answer">loral epsum</div>
+          </div>
+          <div class="detail">
+            <div class="label">Username</div><div class="colon"> : </div>
+            <div class="answer">loral epsum</div>
+          </div>
+          <div class="detail">
+            <div class="label">E-mail</div><div class="colon"> : </div>
+            <div class="answer">loral epsum</div>
+          </div>
+          <div class="detail">
+            <div class="label">You are</div><div class="colon"> : </div>
+            <div class="answer">loral epsum</div>
+          </div>
+        </div>
+      </div>
+      <div class="box right">
+        <div class="logoutdiv">
+          <button id="signout">Logout</button>
+        </div>
+        <div class="pic">
+            <img class="yours" src="{% static '/material/pics/teacher.png' %}" alt="Your's dp">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

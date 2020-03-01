@@ -1,0 +1,152 @@
+
+/* NAVBAR */
+
+.navbar {
+  font-size: 140%;
+  font-family: 'Concert One', cursive;
+  display: flex;
+  background-color: black;
+  color: white;
+}
+
+.navbar a {
+  color: beige;
+}
+
+.navbar a:hover {
+  text-decoration-line: underline;
+  color: white;
+  padding-top: 5%;
+}
+
+.navlabel {
+  display: flex;
+  flex: 1;
+  width: .5%;
+}
+
+.icondiv {
+  flex-basis: 4%;
+}
+
+.mainicon {
+  height: 100%;
+  width: 100%;
+}
+
+/* HEADING */
+
+.heading {
+  width: 70%;
+  margin-left: 15%;
+  font-family: 'Concert One', cursive;
+  margin-top: 5%;
+  font-size: 160%;
+}
+
+body {
+  background-image: url("../material/pics/addteacherBackground.jpg");
+  background-size: cover;
+}
+
+/* TEACHER PIC */
+
+.addteacher {
+  font-family: 'Nunito', sans-serif;
+  display: flex;
+  width: 80%;
+  margin-left: 10%;
+  margin-bottom: 10%;
+}
+
+.teacherpicdiv {
+  display: flex;
+  width: 30%;
+  height: 30%;
+  margin: 3% 5%;
+  flex-direction: column;
+}
+
+.notice {
+  margin-top: 20%;
+  border: 1px dotted black;
+  padding: 3%;
+  text-align: center;
+}
+
+.notice a {
+  color: black;
+  font-size: 120%;
+  font-weight: bold;
+  text-decoration-line: underline;
+}
+
+.notice a:hover {
+  text-decoration-line: initial;
+}
+
+.teacherpic {
+  width: 100%;
+  height: 100%;
+}
+
+/* TEACHER DETAILS */
+
+.teacherform {
+  display: flex;
+  flex-direction: column;
+}
+
+.teacherdetails{
+  display: flex;
+  margin-bottom: 2%;
+}
+
+.teacherdetailsfield {
+  display: flex;
+  width: 70%;
+  flex-wrap: wrap;
+}
+
+.ffield {
+  display: flex;
+  width: 30%;
+}
+
+.subjectscheckbox {
+  display: flex;
+  width: 35%;
+}
+
+.yearradio {
+  display: flex;
+  width: 35%;
+}
+
+textarea {
+  width: 80%;
+  height: 200%;
+}
+
+input[type="text"], input[type="number"], textarea {
+  background: rgba(0, 0, 0, 0);
+  border-top: 0px;
+  border-right: 0px;
+  border-left: 0px;
+  border-bottom: 3px solid gray;
+}
+
+/* FOOTER */
+
+.footer {
+  font-family: 'Concert One', cursive;
+  clear: both;
+  height: 15%;
+  text-align: center;
+  background-color: black;
+  color: white;
+}
+
+.footer h1 {
+  padding: 1%;
+}

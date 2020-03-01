@@ -1,0 +1,40 @@
+
+
+/* @media only screen and (min-width: 600px) {
+  .icons{
+    width:30em;
+    padding-bottom:8%;
+  }
+  .aboutpic{
+    width: 50%;
+    height:50%;
+    margin-bottom: 5%;
+  }
+
+  .icon {
+    line-height:1em;
+    padding-bottom: 0%;
+   
+  }
+  .aboutpics{
+    margin-right:-8%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .icons{
+    width:10em;
+  }
+  .aboutpic{
+    width: 95%;
+    height:95%;
+  }
+
+  .icon {
+    line-height:em;
+   
+  }
+  .aboutpics{
+    margin-right: 9%;
+  }
+} */

@@ -1,0 +1,51 @@
+/* NAVBAR */
+
+.navbar {
+  font-size: 140%;
+  font-family: 'Concert One', cursive;
+  display: flex;
+  background-color: black;
+  color: white;
+}
+
+.navbar a {
+  color: beige;
+}
+
+.navbar a:hover {
+  text-decoration-line: underline;
+  color: white;
+  padding-top: 5%;
+}
+
+.navlabel {
+  display: flex;
+  flex: 1;
+  width: .5%;
+}
+
+.icondiv {
+  flex-basis: 4%;
+}
+
+.mainicon {
+  height: 100%;
+  width: 100%;
+}
+
+
+
+/* FOOTER */
+
+.footer {
+  font-family: 'Concert One', cursive;
+  clear: both;
+  height: 15%;
+  text-align: center;
+  background-color: black;
+  color: white;
+}
+
+.footer h1 {
+  padding: 1%;
+}

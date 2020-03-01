@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'css/collegesList.css' %}">
+
+<div class="heading">
+  <p>Colleges</p>
+</div>
+<section class="colleges">
+
+  {% if collegeList %}
+    {% for college in collegeList %}
+      <div class="college">
+        <div class="collegepic">
+          {% if guru.image %}
+            <img class="pic" src="{% static 'material/pics/aacollege72091432.jpg' %}">
+          {% else %}
+            <img class="pic" src="{% static 'material/pics/aacollege72091432.jpg' %}">
+          {% endif %}
+          </div>
+        <div class="collegetext ">
+          <div class="cname textdiv">
+          <span class="lhead">Name</span><strong class="colon">:</strong>{{college.name}}
+          </div>
+          <div class="cplace textdiv">
+            <span class="lhead">Loaction</span><strong class="colon">:</strong>{{college.location}}
+          </div>
+          <div class="cplace textdiv">
+            <span class="lhead">Founded</span><strong class="colon">:</strong>{{college.founded}}
+          </div>
+          <div class="cplace textdiv">
+            <span class="lhead">Type</span><strong class="colon">:</strong>{{college.types}}
+          </div>
+          <div class="cplace textdiv">
+            <span class="lhead">Website</span><strong class="colon">:</strong>{{college.website}}
+          </div>
+          <div class="cplace textdiv">
+            <span class="lhead">Contact No.</span><strong class="colon">:</strong>{{college.phone}}
+          </div>
+          <div class="cplace textdiv">
+            <span class="lhead">Describtion</span><strong class="colon">:</strong>{{college.describe}}
+          </div>
+          <!-- <div class="cteachers ">
+            <span class="lhead"><a class="tlink" href="{% url 'school' %}">Know more about school</a> </span>
+          </div> -->
+        </div>  
+      </div>
+    {% endfor %}
+  {% else %}
+    <div>
+      <p>No College's Right now</p>
+    </div>
+  {% endif %}
+</section>  
+
+{% endblock %}

@@ -1,0 +1,154 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'css/aboutus.css' %}">
+<div><h1 class="heading">About Praise My Guru</h1></div>
+<section class="websiteinfo">
+  <div class="com">
+    <div class="webpicdiv">
+      <img class="webpic" src="{% static 'material/pics/mainIcon.png' %}">
+    </div>
+    <div class="webiconsdiv">
+      <div class="webicons"><a href="https://www.gmail.com"><img class="webicon gmail" src="{% static 'material/pics/gmail.png' %}"></a></div>
+      <div class="webicons"><a href="https://www.facebook.com"><img class="webicon facebook" src="{% static 'material/pics/facebook.png' %}"></a></div>
+      <div class="webicons"><a href="https://www.github.com"><img class="webicon github" src="{% static 'material/pics/github.png' %}"></a></div>
+      <div class="webicons"><a href="https://www.twitter.com"><img class="webicon twitter" src="{% static 'material/pics/twitter.png' %}"></a></div>
+    </div>
+  </div>
+  <div class="webtext">
+    <strong>Praise My Guru</strong> is dedicated to our gurs's who spand their entier time thing about betterment of students. So we thought to create a website for our Guru where students can express their feelings towards their Guru's. <br> <br> <strong>How this website is different from other's? </strong> <br> Here we are changing the notion of <strong> "rating" to "prasing"</strong> as guru cant be rated by students who has sacreficed his/her life in building the brightful futher for students. <br> As <strong>Malala Yousafzai </strong> nobel peace winner has rightly said <br><strong>"One child, one teacher, one pen and one book can change the world"</strong><br><br>Thus, we need your support to take out some time and remeber those gurs's which have made your life bettre then yesterday. Kindly, show your gratitute towards them and let others get to know who wonderful are they!! <br> With this I will like to thank's all of my Guru's to make be better human being. 
+
+  </div>
+</section>
+{% if messages %}
+  <ul class="messages">
+    {% for message in messages %}
+  
+      {% if message.tags %} {% endif %} <div class="msg" style="color: red; font-size:120%; text-align:center">{{ message }}</div>
+
+    {% endfor %}
+  </ul>
+{% endif %}
+<section class="feedbacksec">
+  <div class="feedbackdiv">
+    <div class="feedbackboxes">
+      <div class="feedheading"><h1 class="heading">We are happy to listen from you!!</h1></div>
+    </div>
+    <div class="feedbackform">
+      <form action="{% url 'aboutus' %}" method="POST">
+        {% csrf_token %}
+        <div class="eachlabel">
+          <div class="question">
+            <label for="name">Name</label>
+          </div>
+          <div class="response">
+            <input type="text" name="name" required>
+          </div>
+        </div>
+        <div class="eachlabel">
+          <div class="question">
+            <label for="email">E-mail</label>
+          </div>
+          <div class="response">
+            <input type="email" name="email" required>
+          </div>
+        </div>
+        <div class="eachlabel">
+          <div class="question ">
+            <label for="expirence">How was your expirence</label>
+          </div>
+          <div class="response" >
+            <input type="radio"  required class="qradio" name="expirence" value="best">  Best
+            <input type="radio" required class="qradio"  name="expirence" value="good">  Good
+            <input type="radio"  required class="qradio"  name="expirence" value="worst">  Worst
+          </div>
+        </div>
+        <div class="eachlabel">
+          <div class="question ">
+            <label for="help">Will you like to help us in any way posssible?</label>
+          </div>
+          <div class="response " >
+            <input type="radio" required class="qradio"  name="help" value="yes">  Yes
+            <input type="radio" required class="qradio"  name="help" value="no">  No
+          </div>
+        </div>
+        <div class="eachlabel">
+          <div class="question ">
+            <label for="category">You are</label>
+          </div>
+          <div class="response " >
+            <input type="radio" required class="qradio"  name="category" value="Student">  Student
+            <input type="radio" required class="qradio"  name="category" value="Guru">  Guru
+            <input type="radio" required class="qradio"  name="category" value="Guru">  Other profession
+          </div>
+        </div>
+        <div class="eachlabel">
+          <div class="question">
+            <label for="help">Will you like to help us in any way posssible?</label>
+          </div>
+          <div class="response">
+            <textarea name="suggestion" placeholder="Write dowm your thoughts!!" required></textarea>
+          </div>
+        </div>
+        <div class="eachlabel">
+          <div class="question submit">
+            <input type="submit">
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<div><h1 class="heading">Contributions</h1></div>
+<section class="pinfo">
+  <div class="person">
+    <div class="picdiv">
+      <img class="pic" src="{% static 'material/pics/bhagat.jpeg' %}">
+    </div>
+    
+    <div class="iconsdiv">
+      <div class="icons"><a href="https://www.gmail.com"><img class="icon gmail" src="{% static 'material/pics/gmail.png' %}"></a></div>
+      <div class="icons"><a href="https://www.facebook.com"><img class="icon facebook" src="{% static 'material/pics/facebook.png' %}"></a></div>
+      <div class="icons"><a href="https://www.github.com"><img class="icon github" src="{% static 'material/pics/github.png' %}"></a></div>
+      <div class="icons"><a href="https://www.twitter.com"><img class="icon twitter" src="{% static 'material/pics/twitter.png' %}"></a></div>
+    </div>
+    <div class="ptext">
+      Bhagat Singh <br> 1VA17IS011 <br> V Sem, ISE <br> Sai Vidya Institute Of Technology <br>
+    </div>
+  </div>
+  <div class="person">
+    <div class="picdiv">
+      <img class="pic" src="{% static 'material/pics/sonu.jpeg' %}">
+    </div>
+    <div class="iconsdiv">
+      <div class="icons"><a href="https://www.gmail.com"><img class="icon gmail" src="{% static 'material/pics/gmail.png' %}"></a></div>
+      <div class="icons"><a href="https://www.facebook.com"><img class="icon facebook" src="{% static 'material/pics/facebook.png' %}"></a></div>
+      <div class="icons"><a href="https://www.github.com"><img class="icon github" src="{% static 'material/pics/github.png' %}"></a></div>
+      <div class="icons"><a href="https://www.twitter.com"><img class="icon twitter" src="{% static 'material/pics/twitter.png' %}"></a></div>
+    </div>
+    <div class="ptext">
+      Biswajit Sahoo <br> 1VA17IS014 <br> V Sem, ISE <br> Sai Vidya Institute Of Technology <br>
+    </div>
+  </div>
+  <div class="person">
+    <div class="picdiv">
+      <img class="pic" src="{% static 'material/pics/unavailable.png' %}">
+    </div>
+    <div class="iconsdiv">
+      <div class="icons"><a href="https://www.gmail.com"><img class="icon gmail" src="{% static 'material/pics/gmail.png' %}"></a></div>
+      <div class="icons"><a href="https://www.facebook.com"><img class="icon facebook" src="{% static 'material/pics/facebook.png' %}"></a></div>
+      <div class="icons"><a href="https://www.github.com"><img class="icon github" src="{% static 'material/pics/github.png' %}"></a></div>
+      <div class="icons"><a href="https://www.twitter.com"><img class="icon twitter" src="{% static 'material/pics/twitter.png' %}"></a></div>
+    </div>
+    <div class="ptext">
+      Atul Singh <br> 1VA17IS010 <br>  V Sem, ISE <br> Sai Vidya Institute Of Technology <br>
+
+    </div>
+  </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,172 @@
+/* NAVBAR */
+
+.navbar {
+  font-size: 140%;
+  font-family: 'Concert One', cursive;
+  display: flex;
+  background-color: black;
+  color: white;
+}
+
+.navbar a {
+  color: beige;
+}
+
+.navbar a:hover {
+  text-decoration-line: underline;
+  color: white;
+  padding-top: 5%;
+}
+
+.navlabel {
+  display: flex;
+  flex: 1;
+  width: .5%;
+}
+
+.icondiv {
+  flex-basis: 4%;
+}
+
+.mainicon {
+  height: 100%;
+  width: 100%;
+}
+
+
+/* INSTITUTE */
+.institutesec {
+  display: flex;
+  width: 100%;
+  /* margin-left: 5%; */
+}
+
+.institutediv {
+  display: flex;
+  width: 50%;
+  align-content: center;
+  justify-content: center;
+}
+
+.boxes {
+  width: 50%;
+  padding-bottom: 10%;
+
+}
+
+input[type="text"], input[type="number"], input[type="url"], button {
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 0px;
+  font-size: 120%;
+  padding-left: 5%;
+  width: 100%;
+  height: 15  0%;
+  background: transparent;
+  color: black;
+  font-weight: bold;
+}
+
+input[type="checkbox"] {
+  margin: 10%;
+  /* width: 100%; */
+}
+input[type="radio"] {
+  margin: 10%;
+  /* width: 100%; */
+}
+.colgtype {
+  display: flex;
+}
+
+.checkboxdiv {
+  display: flex;
+  flex-direction: column;
+  color: black;
+}
+
+.outercheck {
+  display: flex;
+}
+
+
+label {
+  font-weight: bolder;
+  padding-right: 5%;
+}
+
+.formfield {
+  margin-top: 10%; 
+  display: flex;
+  width: 100%;
+}
+
+button {
+  padding: 5% 0%;
+  border: 5px solid black;
+  color: black;
+  font-weight: bolder;
+  font-size: 200%;
+  margin-top: 10%;
+}
+
+span {
+  display: inline;
+}
+
+/* HEADING */
+
+body {
+  background-image: url(./addinstitute.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.heading {
+  font-family: 'Concert One', cursive;
+  font-size: 250%;
+  text-align: center;
+  margin-bottom: 5%;
+  color: black;
+  margin: 15% 0%;
+}
+
+.heading:hover {
+  text-decoration-line: underline;
+}
+
+.quote {
+  width: 100%;
+  display: flex;
+  color:  white;
+  background-color: black;
+  font-size: 300%;
+  font-weight: bolder;
+  justify-content: center;
+  align-content: center;
+}
+
+.quote p {
+  display: flex;
+  width: 70%;
+  margin: 15%;
+  border: 2px solid white;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  padding: 25% 15%;
+}
+/* FOOTER */
+
+.footer {
+  font-family: 'Concert One', cursive;
+  clear: both;
+  height: 15%;
+  text-align: center;
+  background-color: black;
+  color: white;
+}
+
+.footer h1 {
+  padding: 1%;
+}

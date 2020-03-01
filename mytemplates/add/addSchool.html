@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<link rel="stylesheet" type="text/css" href="{% static './css/addSchool.css' %}" >
+
+<section class="institutesec">
+  <div class="institutediv">
+    <div class="boxes">
+      <div class="heading">
+        Add Your School
+      </div>
+      <form class="form" action="{% url 'addSchool' %}" method="POST"   enctype="multipart/form-data">
+          {% csrf_token %}
+        <div class="formfield">
+          <input type="text" name="name" placeholder="Institute Name" required>
+        </div>
+        <div class="formfield">
+          <input type="text" name="location" placeholder="Institute Location" required>
+        </div>
+        <div class="formfield">
+          <label for="colg" class="colgtype">Institute Type</label>
+          <div class="checkboxdiv">
+            <div class="outercheck"><input type="checkbox"  class="rcolgtype" name="colg" value="engineering"><span>Kidargarden</span></div>   
+            <div class="outercheck"><input type="checkbox"  class="rcolgtype" name="colg" value="law">Primary</div>
+            <div class="outercheck"><input type="checkbox"  class="rcolgtype" name="colg" value="arts">HighSchool</div>
+            <div class="outercheck"><input type="checkbox"  class="rcolgtype" name="colg" value="commerce"><span>PreUniversity</span> </div>
+          </div>
+        </div>
+        <div class="formfield">
+          <label for="rate" class="colgtype">Best describe as:</label>
+          <div class="checkboxdiv">
+            <div class="outercheck"><input type="radio" name="rate" required value="prestigious">Prestigious</div>
+            <div class="outercheck"><input type="radio" name="rate" required value="decent">Decent</div>
+            <div class="outercheck"><input type="radio" name="rate" required value="avg">Average</div>
+          </div>
+        </div>
+        <div class="formfield">
+          <input type="text" name="website" placeholder="Institute website">
+        </div>
+        <div class="formfield">
+          <input type="number" name="phoneno" placeholder="Institute Contact No">
+        </div>
+        <div class="formfield">
+          <input type="number" name="year" placeholder="Institute Founded">
+        </div>
+        <div class="formfield">
+          <input type="file" name="pic1">
+        </div>
+        <div class="formfield">
+          <button type="submit">Publish Your College</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="institutediv">
+    <div class="quote">
+      <p>
+        “As long as teachers give tests, there will always be prayer in schools.”
+      </p>
+    </div>
+  </div>
+</section>
+
+{% endblock %}
